@@ -1,0 +1,109 @@
+{
+  "resourceType": "Questionnaire",
+  "title": "Covid-19 Community Oxygen Weaning Virtual Ward Referral Form",
+  "status": "draft",
+  "item": [
+    {
+      "text": "Medically fit for dischargeon oxygenas decided by their designated consultant/registrar",
+      "type": "boolean",
+      "linkId": "9733447628385",
+      "required": true
+    },
+    {
+      "text": "Able to cope at homem 1",
+      "linkId": "4925767348263",
+      "type": "boolean"
+    },
+    {
+      "text": "For readmission and active treatment(not EoL",
+      "linkId": "5250588801460",
+      "type": "boolean"
+    },
+    {
+      "text": "Indications for home-based O2 weaning",
+      "linkId": "9802306120456",
+      "type": "group",
+      "item": [
+        {
+          "text": "Meets all HOS safety criteria",
+          "linkId": "29035756398",
+          "type": "boolean"
+        },
+        {
+          "text": "SpO2< 92% on room air at rest",
+          "linkId": "3716859969252",
+          "type": "boolean"
+        },
+        {
+          "text": "Admissionfor 10 or more days",
+          "linkId": "6666000166111",
+          "type": "boolean"
+        },
+        {
+          "text": "Does  not  require  more  than  4l/min  via  nasal  cannula to achieve SpO2of 94%",
+          "linkId": "4082524582295",
+          "type": "boolean"
+        },
+        {
+          "text": "Use  venturi  mask  if  patients  are  unable  to  tolerate  / use nasal cannula",
+          "linkId": "5281304020838",
+          "type": "boolean"
+        },
+        {
+          "text": "Stable or decreasing oxygen requirements for the last 48/72 hours",
+          "linkId": "4680641016193",
+          "type": "string"
+        },
+        {
+          "text": "Approved by discharging respiratory consultant",
+          "linkId": "5961192000104",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "text": "Pre-discharge checklist",
+      "linkId": "1931838386576",
+      "type": "group",
+      "item": [
+        {
+          "text": "Escalation decision made",
+          "linkId": "4780961516710",
+          "type": "boolean"
+        },
+        {
+          "text": "please state ceiling of care",
+          "linkId": "6983632700226",
+          "type": "string"
+        },
+        {
+          "text": "Discharge checklist",
+          "linkId": "5289895349614",
+          "type": "group",
+          "item": [
+            {
+              "text": "Paracetamol supplies",
+              "linkId": "1652695092400",
+              "type": "boolean"
+            },
+            {
+              "text": "VTE prophylaxis if applicable",
+              "linkId": "6322786896000",
+              "type": "boolean"
+            }
+          ]
+        },
+        {
+          "text": "Responsible Consultant",
+          "linkId": "6780759528980",
+          "type": "string"
+        },
+        {
+          "text": "Other relevant details",
+          "linkId": "8154039034214",
+          "type": "string"
+        }
+      ]
+    }
+  ]
+}
