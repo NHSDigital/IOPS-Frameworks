@@ -1,0 +1,31 @@
+{
+    "resourceType": "QuestionnaireResponse",
+    "id": "43199619-a20d-4b7c-8b71-2d071a9f3857",
+    "questionnaire": "https://fhir.example.nhs.uk/Questionnaire/OxygenWeaning",
+    "status": "completed",
+    "subject": {
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/nhs-number",
+            "value": "9876543210"
+        },
+        "display": "R Kanfeld"
+    },
+    "authored": "2022-01-11T16:40:00+00:00",
+    "source": {
+        "type": "Practitioner",
+        "identifier": {
+            "system": "https://fhir.hl7.org.uk/Id/gmp-number",
+            "value": "G5612908"
+        }
+    },
+    "item": [
+        {
+            "linkId": "9733447628385",
+            "answer": [
+                {
+                    "valueBoolean": "true"
+                }
+            ]
+        }
+    ]
+}
