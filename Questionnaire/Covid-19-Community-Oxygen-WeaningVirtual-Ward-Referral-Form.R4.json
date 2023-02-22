@@ -1,6 +1,7 @@
 {
   "resourceType": "Questionnaire",
   "title": "Covid-19 Community Oxygen Weaning Virtual Ward Referral Form",
+  "url": "https://fhir.example.nhs.uk/Questionnaire/OxygenWeaning",
   "status": "draft",
   "item": [
     {
