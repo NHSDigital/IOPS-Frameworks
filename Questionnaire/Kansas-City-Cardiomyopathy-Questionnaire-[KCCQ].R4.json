@@ -6,6 +6,7 @@
       "system": "http://loinc.org"
     }
   ],
+  "url":"https://example.fhir.nhs.uk/Questionnaire/KansasCityCardiomyopathyQuestionnaire",
   "title": "Kansas City Cardiomyopathy Questionnaire [KCCQ]",
   "resourceType": "Questionnaire",
   "status": "draft",

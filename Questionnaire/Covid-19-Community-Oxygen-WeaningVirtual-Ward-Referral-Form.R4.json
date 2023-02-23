@@ -3,6 +3,9 @@
   "title": "Covid-19 Community Oxygen Weaning Virtual Ward Referral Form",
   "url": "https://fhir.example.nhs.uk/Questionnaire/OxygenWeaning",
   "status": "draft",
+  "subjectType": [
+    "Patient"
+  ],
   "item": [
     {
       "text": "Medically fit for dischargeon oxygenas decided by their designated consultant/registrar",
