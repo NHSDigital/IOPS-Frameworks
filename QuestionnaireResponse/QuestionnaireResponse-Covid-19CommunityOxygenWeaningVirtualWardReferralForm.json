@@ -1,6 +1,10 @@
 {
     "resourceType": "QuestionnaireResponse",
     "id": "43199619-a20d-4b7c-8b71-2d071a9f3857",
+    "identifier": {
+        "system": "https://tools.ietf.org/html/rfc4122",
+        "value": "43199619-a20d-4b7c-8b71-2d071a9f3857"
+    },
     "questionnaire": "https://fhir.example.nhs.uk/Questionnaire/OxygenWeaning",
     "status": "completed",
     "subject": {
