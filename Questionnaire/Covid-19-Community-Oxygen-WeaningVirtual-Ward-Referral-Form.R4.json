@@ -1,89 +1,79 @@
 {
-  "resourceType": "Questionnaire",
-  "title": "Covid-19 Community Oxygen Weaning Virtual Ward Referral Form",
-  "url": "https://fhir.example.nhs.uk/Questionnaire/OxygenWeaning",
-  "status": "draft",
-  "subjectType": [
-    "Patient"
-  ],
+  "id": "185a1edc-f0ea-4176-8a9d-035313326124",
   "item": [
     {
-      "text": "Medically fit for dischargeon oxygenas decided by their designated consultant/registrar",
       "type": "boolean",
       "linkId": "9733447628385",
+      "text": "Medically fit for discharge on oxygen as decided by their designated consultant/registrar",
       "required": true
     },
     {
-      "text": "Able to cope at homem 1",
+      "type": "boolean",
       "linkId": "4925767348263",
-      "type": "boolean"
+      "text": "Able to cope at home"
     },
     {
-      "text": "For readmission and active treatment(not EoL",
+      "type": "boolean",
       "linkId": "5250588801460",
-      "type": "boolean"
+      "text": "For readmission and active treatment (not EoL)"
     },
     {
-      "text": "Indications for home-based O2 weaning",
-      "linkId": "9802306120456",
-      "type": "group",
       "item": [
         {
-          "text": "Meets all HOS safety criteria",
+          "type": "boolean",
           "linkId": "29035756398",
-          "type": "boolean"
+          "text": "Meets all HOS safety criteria"
         },
         {
-          "text": "SpO2< 92% on room air at rest",
+          "type": "boolean",
           "linkId": "3716859969252",
-          "type": "boolean"
+          "text": "SpO2< 92% on room air at rest"
         },
         {
-          "text": "Admissionfor 10 or more days",
+          "type": "boolean",
           "linkId": "6666000166111",
-          "type": "boolean"
+          "text": "Admission for 10 or more days"
         },
         {
-          "text": "Does  not  require  more  than  4l/min  via  nasal  cannula to achieve SpO2of 94%",
+          "type": "boolean",
           "linkId": "4082524582295",
-          "type": "boolean"
+          "text": "Does  not  require  more  than  4l/min  via  nasal  cannula to achieve SpO2of 94%"
         },
         {
-          "text": "Use  venturi  mask  if  patients  are  unable  to  tolerate  / use nasal cannula",
+          "type": "boolean",
           "linkId": "5281304020838",
-          "type": "boolean"
+          "text": "Use  venturi  mask  if  patients  are  unable  to  tolerate  / use nasal cannula"
         },
         {
-          "text": "Stable or decreasing oxygen requirements for the last 48/72 hours",
+          "type": "choice",
           "linkId": "4680641016193",
-          "type": "string"
+          "text": "Stable or decreasing oxygen requirements for the last 48/72 hours",
+          "answerValueSet": "http://terminology.hl7.org/ValueSet/v2-0136"
         },
         {
-          "text": "Approved by discharging respiratory consultant",
+          "type": "choice",
           "linkId": "5961192000104",
-          "type": "string"
+          "text": "Approved by discharging respiratory consultant",
+          "answerValueSet": "http://terminology.hl7.org/ValueSet/v2-0136"
         }
-      ]
+      ],
+      "type": "group",
+      "linkId": "9802306120456",
+      "text": "Indications for home-based O2 weaning"
     },
     {
-      "text": "Pre-discharge checklist",
-      "linkId": "1931838386576",
-      "type": "group",
       "item": [
         {
-          "text": "Escalation decision made",
+          "type": "boolean",
           "linkId": "4780961516710",
-          "type": "boolean"
+          "text": "Escalation decision made"
         },
         {
-          "text": "please state ceiling of care",
+          "type": "string",
           "linkId": "6983632700226",
-          "type": "string"
+          "text": "please state ceiling of care"
         },
         {
-          "text": "Discharge checklist",
-          "linkId": "5289895349614",
-          "type": "group",
           "item": [
             {
               "text": "Paracetamol supplies",
@@ -95,19 +85,38 @@
               "linkId": "6322786896000",
               "type": "boolean"
             }
-          ]
+          ],
+          "type": "group",
+          "linkId": "5289895349614",
+          "text": "Discharge checklist"
         },
         {
-          "text": "Responsible Consultant",
+          "type": "string",
           "linkId": "6780759528980",
-          "type": "string"
+          "text": "Responsible Consultant"
         },
         {
           "text": "Other relevant details",
           "linkId": "8154039034214",
           "type": "string"
         }
-      ]
+      ],
+      "type": "group",
+      "linkId": "1931838386576",
+      "text": "Pre-discharge checklist"
+    }
+  ],
+  "resourceType": "Questionnaire",
+  "url": "https://fhir.example.nhs.uk/Questionnaire/OxygenWeaning",
+  "title": "Covid-19 Community Oxygen Weaning Virtual Ward Referral Form",
+  "status": "draft",
+  "subjectType": [
+    "Patient"
+  ],
+  "code": [
+    {
+      "system": "http://snomed.info/sct",
+      "code": "1325031000000108"
     }
   ]
 }
