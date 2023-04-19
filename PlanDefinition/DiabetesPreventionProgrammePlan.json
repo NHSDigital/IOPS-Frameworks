@@ -142,14 +142,6 @@
       ],
       "input": [
         {
-          "extension": [
-            {
-              "url": "http://england.nhs.uk/fhir/StructureDefinition/workflow-supportingInfo",
-              "valueReference": {
-                "display": "Vital Signs"
-              }
-            }
-          ],
           "type": "Questionnaire"
         }
       ],
@@ -158,7 +150,17 @@
           "type": "QuestionnaireResponse"
         }
       ],
-      "definitionCanonical": "https://fhir.england.nhs.uk/ActivityDefinition/NHSHealthCheck"
+      "definitionCanonical": "https://fhir.england.nhs.uk/ActivityDefinition/NHSHealthCheck",
+      "_definitionCanonical": {
+        "extension": [
+          {
+            "url": "http://england.nhs.uk/fhir/StructureDefinition/workflow-supportingInfo",
+            "valueReference": {
+              "display": "Vital Signs"
+            }
+          }
+        ]
+      }
     },
     {
       "id": "DiabetesRiskAssessment",
@@ -182,14 +184,6 @@
       ],
       "input": [
         {
-          "extension": [
-            {
-              "url": "http://england.nhs.uk/fhir/StructureDefinition/workflow-supportingInfo",
-              "valueReference": {
-                "display": "Diabetes UK Risk Asssement"
-              }
-            }
-          ],
           "type": "Questionnaire"
         }
       ],
@@ -199,6 +193,16 @@
         }
       ],
       "definitionCanonical": "https://fhir.england.nhs.uk/ActivityDefinition/NHSDiabetesPreventionProgrammeAssessment",
+      "_definitionCanonical": {
+        "extension": [
+          {
+            "url": "http://england.nhs.uk/fhir/StructureDefinition/workflow-supportingInfo",
+            "valueReference": {
+              "display": "Diabetes UK Risk Asssement"
+            }
+          }
+        ]
+      },
       "action": [
         {
           "id": "NHSDiabetesPreventionProgrammeReferral",
