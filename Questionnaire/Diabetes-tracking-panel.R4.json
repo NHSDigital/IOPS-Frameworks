@@ -1,0 +1,332 @@
+{
+  "item": [
+    {
+      "type": "decimal",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+          "valueCoding": {
+            "system": "http://unitsofmeasure.org",
+            "code": "mg/dL",
+            "display": "mg/dL"
+          }
+        }
+      ],
+      "linkId": "/41653-7",
+      "code": [
+        {
+          "system": "http://loinc.org",
+          "code": "41653-7",
+          "display": "Glucose BldC Glucomtr-mCnc"
+        }
+      ],
+      "text": "Glucose BldC Glucomtr-mCnc",
+      "required": false
+    },
+    {
+      "type": "decimal",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+          "valueCoding": {
+            "system": "http://unitsofmeasure.org",
+            "code": "mg/dL",
+            "display": "mg/dL"
+          }
+        }
+      ],
+      "linkId": "/2345-7",
+      "code": [
+        {
+          "system": "http://loinc.org",
+          "code": "2345-7",
+          "display": "Glucose - lab"
+        }
+      ],
+      "text": "Glucose - lab",
+      "required": false
+    },
+    {
+      "type": "choice",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "drop-down",
+                "display": "Drop down"
+              }
+            ],
+            "text": "Drop down"
+          }
+        }
+      ],
+      "linkId": "/55420-4",
+      "code": [
+        {
+          "system": "http://loinc.org",
+          "code": "55420-4",
+          "display": "Hours p meal Time Patient"
+        }
+      ],
+      "text": "Hours p meal Time Patient",
+      "required": false,
+      "answerOption": [
+        {
+          "valueCoding": {
+            "system": "http://loinc.org",
+            "code": "LA11828-3",
+            "display": "1 hour"
+          }
+        },
+        {
+          "valueCoding": {
+            "system": "http://loinc.org",
+            "code": "LA11829-1",
+            "display": "2 hours"
+          }
+        },
+        {
+          "valueCoding": {
+            "system": "http://loinc.org",
+            "code": "LA11830-9",
+            "display": "3 hours"
+          }
+        },
+        {
+          "valueCoding": {
+            "system": "http://loinc.org",
+            "code": "LA11831-7",
+            "display": "Fasting"
+          }
+        }
+      ]
+    },
+    {
+      "type": "decimal",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+          "valueCoding": {
+            "system": "http://unitsofmeasure.org",
+            "code": "%",
+            "display": "%"
+          }
+        }
+      ],
+      "linkId": "/4548-4",
+      "code": [
+        {
+          "system": "http://loinc.org",
+          "code": "4548-4",
+          "display": "HbA1c MFr Bld"
+        }
+      ],
+      "text": "HbA1c MFr Bld",
+      "required": false
+    },
+    {
+      "type": "decimal",
+      "code": [
+        {
+          "code": "27353-2",
+          "display": "Est. average glucose Bld gHb Est-mCnc",
+          "system": "http://loinc.org"
+        }
+      ],
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+          "valueCoding": {
+            "code": "mg/dL",
+            "display": "mg/dL",
+            "system": "http://unitsofmeasure.org"
+          }
+        }
+      ],
+      "required": false,
+      "linkId": "/27353-2",
+      "text": "Est. average glucose Bld gHb Est-mCnc"
+    },
+    {
+      "type": "decimal",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+          "valueCoding": {
+            "display": "mg/L"
+          }
+        }
+      ],
+      "linkId": "/14957-5",
+      "code": [
+        {
+          "system": "http://loinc.org",
+          "code": "14957-5",
+          "display": "Microalbumin Ur-mCnc"
+        }
+      ],
+      "text": "Microalbumin Ur-mCnc",
+      "required": false
+    },
+    {
+      "item": [
+        {
+          "text": "Beta-hydroxybutyrate+Acetoacetate+Acetone",
+          "type": "display",
+          "linkId": "/2514-8-help",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "text": "Help-Button",
+                "coding": [
+                  {
+                    "code": "help",
+                    "display": "Help-Button",
+                    "system": "http://hl7.org/fhir/questionnaire-item-control"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "type": "choice",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "drop-down",
+                "display": "Drop down"
+              }
+            ],
+            "text": "Drop down"
+          }
+        }
+      ],
+      "linkId": "/2514-8",
+      "code": [
+        {
+          "system": "http://loinc.org",
+          "code": "2514-8",
+          "display": "Ketones Ur Ql Strip"
+        }
+      ],
+      "text": "Ketones Ur Ql Strip",
+      "required": false,
+      "answerOption": [
+        {
+          "valueCoding": {
+            "system": "http://loinc.org",
+            "code": "LA6577-6",
+            "display": "Negative"
+          }
+        },
+        {
+          "valueCoding": {
+            "system": "http://loinc.org",
+            "code": "LA11832-5",
+            "display": "Trace"
+          }
+        },
+        {
+          "valueCoding": {
+            "system": "http://loinc.org",
+            "code": "LA8983-4",
+            "display": "Small"
+          }
+        },
+        {
+          "valueCoding": {
+            "system": "http://loinc.org",
+            "code": "LA6751-7",
+            "display": "Moderate"
+          }
+        },
+        {
+          "valueCoding": {
+            "system": "http://loinc.org",
+            "code": "LA8981-8",
+            "display": "Large"
+          }
+        }
+      ]
+    },
+    {
+      "type": "decimal",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+          "valueCoding": {
+            "system": "http://unitsofmeasure.org",
+            "code": "mg/dL",
+            "display": "mg/dL"
+          }
+        }
+      ],
+      "linkId": "/5792-7",
+      "code": [
+        {
+          "system": "http://loinc.org",
+          "code": "5792-7",
+          "display": "Glucose Ur Strip-mCnc"
+        }
+      ],
+      "text": "Glucose Ur Strip-mCnc",
+      "required": false
+    },
+    {
+      "type": "decimal",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+          "valueCoding": {
+            "system": "http://unitsofmeasure.org",
+            "code": "kcal/(24.h)",
+            "display": "kcal/(24.h)"
+          }
+        }
+      ],
+      "linkId": "/9057-1",
+      "code": [
+        {
+          "system": "http://loinc.org",
+          "code": "9057-1",
+          "display": "Calorie intake total 24h"
+        }
+      ],
+      "text": "Calorie intake total 24h",
+      "required": false
+    },
+    {
+      "type": "string",
+      "linkId": "/55400-6",
+      "code": [
+        {
+          "system": "http://loinc.org",
+          "code": "55400-6",
+          "display": "Date of last eye exam"
+        }
+      ],
+      "text": "Date of last eye exam",
+      "required": false
+    }
+  ],
+  "resourceType": "Questionnaire",
+  "url": ""
+  "title": "Diabetes tracking panel",
+  "status": "draft",
+  "code": [
+    {
+      "system": "http://loinc.org",
+      "code": "55399-0",
+      "display": "Diabetes tracking panel"
+    }
+  ]
+}

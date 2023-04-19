@@ -1,15 +1,15 @@
 {
   "resourceType": "PlanDefinition",
   "id": "0f8c345b-e7fb-4727-a28b-f637823331ed",
-  "url": "https://fhir.england.nhs.uk/PlanDefinition/NHSDiabetesPreventionProgramme",
+  "url": "https://fhir.england.nhs.uk/PlanDefinition/NHSHealthCheck",
   "identifier": [
     {
       "system": "https://https://www.england.nhs.uk/programmes",
-      "value": "NHSDiabetesPreventionProgramme"
+      "value": "NHSHealthCheck"
     }
   ],
-  "name": "NHSDiabetesPreventionProgramme",
-  "title": "NHS Diabetes Prevention Programme",
+  "name": "NHSHealthCheck",
+  "title": "NHS Health Check",
   "type": {
     "coding": [
       {
@@ -19,7 +19,7 @@
     ]
   },
   "status": "draft",
-  "description": "The Healthier You NHS Diabetes Prevention Programme, also known as the Healthier You programme, identifies people at risk of developing type 2 diabetes and refers them onto a nine-month, evidence-based lifestyle change programme. It is a joint service from NHS England and [Diabetes UK](https://www.diabetes.org.uk/).",
+  "description": "Example of protocol for assessment and treatment of overweight and obesity",
   "useContext": [
     {
       "code": {
@@ -116,6 +116,76 @@
           }
         }
       ]
+    },
+    {
+      "id": "increase-activity",
+      "category": {
+        "text": "Treatment"
+      },
+      "description": {
+        "text": "Increase exercise"
+      },
+      "priority": {
+        "text": "medium-priority"
+      },
+      "start": {
+        "text": "When patient is sedentary"
+      },
+      "addresses": [
+        {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "414916001",
+              "display": "Obesity (disorder)"
+            }
+          ]
+        }
+      ],
+      "target": [
+        {
+          "measure": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "77592-4",
+                "display": "Moderate physical activity"
+              }
+            ]
+          },
+          "detailRange": {
+            "low": {
+              "value": 150,
+              "unit": "minutes per week"
+            }
+          },
+          "due": {
+            "value": 1,
+            "unit": "a"
+          }
+        },
+        {
+          "measure": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "77593-2",
+                "display": "Vigorous physical activity"
+              }
+            ]
+          },
+          "detailRange": {
+            "low": {
+              "value": 75,
+              "unit": "minutes per week"
+            }
+          },
+          "due": {
+            "value": 1,
+            "unit": "a"
+          }
+        }
+      ]
     }
   ],
   "action": [
@@ -162,6 +232,37 @@
         ]
       },
       "action": [
+        {
+          "id": "PhysicalActivity",
+          "title": "PhysicalActivity",
+          "description": "Referral to a Gym or NHS Provider",
+          "goalId": [
+            "reduce-bmi-ratio"
+          ],
+          "requiredBehavior": "must-unless-documented",
+          "cardinalityBehavior": "single",
+          "code": [
+            {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "390893007",
+                  "display": "Referral to physical activity programme"
+                }
+              ]
+            }
+          ],
+          "input": [
+            {
+              "type": "QuestionnaireResponse"
+            }
+          ],
+          "output": [
+            {
+              "type": "DiagnosticReport"
+            }
+          ]
+        },
         {
           "id": "DiabetesRiskAssessment",
           "title": "Diabetes UK Risk Assessment",
