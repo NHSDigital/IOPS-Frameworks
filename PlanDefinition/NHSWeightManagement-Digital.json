@@ -19,7 +19,7 @@
     ]
   },
   "status": "draft",
-  "description": "The NHS Digital Weight Management Programme supports adults living with obesity who also have a diagnosis of diabetes, hypertension or both, to manage their weight and improve their health.",
+  "description": "The NHS Digital Weight Management Programme supports adults living with obesity who also have a diagnosis of diabetes, hypertension or both, to manage their weight and improve their health. The input is called a template and is probably in FHIR a Questionnaire [NHS Digital Weight Management Programme Template Site](https://templates.wmp.nhs.uk/)",
   "author": [
     {
       "name": "NHS England",
@@ -58,6 +58,11 @@
               "display": "Referral to weight management service"
             }
           ]
+        }
+      ],
+      "input": [
+        {
+          "type": "QuestionnaireResponse"
         }
       ],
       "output": [
