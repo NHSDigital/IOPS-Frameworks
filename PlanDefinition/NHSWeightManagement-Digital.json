@@ -19,7 +19,7 @@
     ]
   },
   "status": "draft",
-  "description": "The NHS Digital Weight Management Programme supports adults living with obesity who also have a diagnosis of diabetes, hypertension or both, to manage their weight and improve their health. The input is called a template and is probably in FHIR a Questionnaire [NHS Digital Weight Management Programme Template Site](https://templates.wmp.nhs.uk/)",
+  "description": "The NHS Digital Weight Management Programme supports adults living with obesity who also have a diagnosis of diabetes, hypertension or both, to manage their weight and improve their health.",
   "author": [
     {
       "name": "NHS England",
@@ -47,6 +47,7 @@
       "goalId": [
         "reduce-bmi-ratio"
       ],
+      "description": "The input is called a template which is available for download from [NHS Digital Weight Management Programme Template Site](https://templates.wmp.nhs.uk/), this probably could be converted to a `FHIR Questionnaire` and used as a portable template format. The programme does not appear to have specified the report format or method.",
       "requiredBehavior": "must-unless-documented",
       "cardinalityBehavior": "single",
       "code": [

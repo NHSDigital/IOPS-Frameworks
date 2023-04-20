@@ -192,7 +192,7 @@
     {
       "id": "NHSHealthCheck",
       "title": "NHS Health Check",
-      "description": "NHS Health Check",
+      "description": "Guidiance for the NHS Health Check may recommend any of the following actions.",
       "textEquivalent": "Weight must be measured so that the BMI can be calculated. Most charts are based on weights obtained with the patient wearing undergarments and no shoes. BMI can be manually calculated (kg/[height in meters]2), but is more easily obtained from a nomogram. Waist circumference is important because evidence suggests that abdominal fat is a particularly strong determinant of cardiovascular risk in those with a BMI of 25 to 34.9 kg/m2. Increased waist circumference can also be a marker of increased risk even in persons of normal weight. The technique for measuring waist circumference is described in the text. A nutrition assessment will also help to assess the diet and physical activity habits of overweight patients",
       "goalId": [
         "reduce-bmi-ratio"
@@ -217,6 +217,14 @@
       ],
       "output": [
         {
+          "extension": [
+            {
+              "url": "http://england.nhs.uk/fhir/StructureDefinition/workflow-supportingInfo",
+              "valueReference": {
+                "display": "Vital Signs"
+              }
+            }
+          ],
           "type": "QuestionnaireResponse"
         }
       ],
@@ -235,7 +243,7 @@
         {
           "id": "PhysicalActivity",
           "title": "PhysicalActivity",
-          "description": "Referral to a Gym or NHS Provider",
+          "description": "Referral to a Gym or NHS Provider. The expected output of this referral is a `DiagnosticReport` with an included PDF Attachment. No UK guidance on this pathway has been found, the [US Physical Activity Implementation Guide](http://build.fhir.org/ig/HL7/physical-activity/index.html) may define a suitable approach.",
           "goalId": [
             "reduce-bmi-ratio"
           ],
@@ -254,6 +262,14 @@
           ],
           "input": [
             {
+              "extension": [
+                {
+                  "url": "http://england.nhs.uk/fhir/StructureDefinition/workflow-supportingInfo",
+                  "valueReference": {
+                    "display": "Vital Signs"
+                  }
+                }
+              ],
               "type": "QuestionnaireResponse"
             }
           ],
@@ -266,7 +282,7 @@
         {
           "id": "DiabetesRiskAssessment",
           "title": "Diabetes UK Risk Assessment",
-          "description": "NHS Health Check",
+          "description": "It is recommended the Diabetes Risk Assessment is performed using `FHIR Structured Data Capture` to make use of existing data and enable workflow automation. If Diabetes UK Assessment is used instead, then the completed form should be stored as screenshot and then stored in clinical records using the `documents` framework. \n\n If the risk is deemed as significant then the referral to Diabetes Prevention Programme may follow.",
           "goalId": [
             "reduce-bmi-ratio"
           ],
@@ -290,6 +306,14 @@
           ],
           "output": [
             {
+              "extension": [
+                {
+                  "url": "http://england.nhs.uk/fhir/StructureDefinition/workflow-supportingInfo",
+                  "valueReference": {
+                    "display": "Type 2 Diabetes Risk Assessment"
+                  }
+                }
+              ],
               "type": "QuestionnaireResponse"
             }
           ],
@@ -308,7 +332,7 @@
             {
               "id": "NHSDiabetesPreventionProgrammeReferral",
               "title": "NHS Diabetes Prevention Programme Referral",
-              "description": "NHS Diabetes Prevention Programme Referral",
+              "description": "If the `e-Referral Service` (which supports `FHIR Workflow`) is used, the `QuestionnaireResponse` should be converted to PDF and uploaded to eRS using the `documents` framework. \n\n The official process for this referral and report is to use NHS email and exchange the referral and report as a PDF attachment.",
               "goalId": [
                 "reduce-bmi-ratio"
               ],
@@ -327,9 +351,25 @@
               ],
               "input": [
                 {
+                  "extension": [
+                    {
+                      "url": "http://england.nhs.uk/fhir/StructureDefinition/workflow-supportingInfo",
+                      "valueReference": {
+                        "display": "Vital Signs"
+                      }
+                    }
+                  ],
                   "type": "QuestionnaireResponse"
                 },
                 {
+                  "extension": [
+                    {
+                      "url": "http://england.nhs.uk/fhir/StructureDefinition/workflow-supportingInfo",
+                      "valueReference": {
+                        "display": "Type 2 Diabetes Risk Assessment"
+                      }
+                    }
+                  ],
                   "type": "QuestionnaireResponse"
                 }
               ],
