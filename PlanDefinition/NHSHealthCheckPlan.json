@@ -51,10 +51,31 @@
   ],
   "relatedArtifact": [
     {
+      "type": "documentation",
+      "display": "NHS Health Check",
+      "document": {
+        "url": "https://www.nhs.uk/conditions/nhs-health-check/"
+      }
+    },
+    {
+      "type": "documentation",
+      "display": "NHS Diabetes Prevention Programme",
+      "document": {
+        "url": "https://www.england.nhs.uk/diabetes/diabetes-prevention/"
+      }
+    },
+    {
       "type": "derived-from",
       "display": "NICE Obesity prevention",
       "document": {
         "url": "https://www.nice.org.uk/guidance/cg43"
+      }
+    },
+    {
+      "type": "documentation",
+      "display": "US Physical Activity",
+      "document": {
+        "url": "http://build.fhir.org/ig/HL7/physical-activity/index.html"
       }
     }
   ],
@@ -85,13 +106,7 @@
         }
       ],
       "documentation": [
-        {
-          "type": "documentation",
-          "display": "NHS Diabetes Prevention Programme",
-          "document": {
-            "url": "https://www.england.nhs.uk/diabetes/diabetes-prevention/"
-          }
-        }
+
       ],
       "target": [
         {
@@ -249,8 +264,8 @@
               "coding": [
                 {
                   "system": "http://snomed.info/sct",
-                  "code": "409073007",
-                  "display": "Education"
+                  "code": "386053000",
+                  "display": "Evaluation procedure"
                 }
               ]
             }
