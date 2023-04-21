@@ -204,8 +204,8 @@
           "coding": [
             {
               "system": "http://snomed.info/sct",
-              "code": "275926002",
-              "display": "Screening - health check"
+              "code": "311791003",
+              "display": "Information gathering"
             }
           ]
         }
@@ -241,21 +241,16 @@
       },
       "action": [
         {
-          "id": "PhysicalActivity",
-          "title": "PhysicalActivity",
-          "description": "Referral to a Gym or NHS Provider. The expected output of this referral is a `DiagnosticReport` with an included PDF Attachment. No UK guidance on this pathway has been found, the [US Physical Activity Implementation Guide](http://build.fhir.org/ig/HL7/physical-activity/index.html) may define a suitable approach.",
-          "goalId": [
-            "reduce-bmi-ratio"
-          ],
-          "requiredBehavior": "must-unless-documented",
-          "cardinalityBehavior": "single",
+          "id": "NHSHealthCheckNextSteps",
+          "title": "NHS Health Check - Guidance",
+          "description": "Guidiance for the NHS Health Check may recommend any of the following actions.",
           "code": [
             {
               "coding": [
                 {
                   "system": "http://snomed.info/sct",
-                  "code": "390893007",
-                  "display": "Referral to physical activity programme"
+                  "code": "409073007",
+                  "display": "Education"
                 }
               ]
             }
@@ -275,78 +270,23 @@
           ],
           "output": [
             {
-              "type": "DiagnosticReport"
-            }
-          ]
-        },
-        {
-          "id": "DiabetesRiskAssessment",
-          "title": "Diabetes UK Risk Assessment",
-          "description": "It is recommended the Diabetes Risk Assessment is performed using `FHIR Structured Data Capture` to make use of existing data and enable workflow automation. If Diabetes UK Assessment is used instead, then the completed form should be stored as screenshot and then stored in clinical records using the `documents` framework. \n\n If the risk is deemed as significant then the referral to Diabetes Prevention Programme may follow.",
-          "goalId": [
-            "reduce-bmi-ratio"
-          ],
-          "requiredBehavior": "must-unless-documented",
-          "cardinalityBehavior": "single",
-          "code": [
-            {
-              "coding": [
-                {
-                  "system": "http://snomed.info/sct",
-                  "code": "310813001",
-                  "display": "Observational assessment"
-                }
-              ]
+              "type": "Task"
             }
           ],
-          "input": [
-            {
-              "type": "Questionnaire"
-            }
-          ],
-          "output": [
-            {
-              "extension": [
-                {
-                  "url": "http://england.nhs.uk/fhir/StructureDefinition/workflow-supportingInfo",
-                  "valueReference": {
-                    "display": "Type 2 Diabetes Risk Assessment"
-                  }
-                }
-              ],
-              "type": "QuestionnaireResponse"
-            }
-          ],
-          "definitionCanonical": "https://fhir.england.nhs.uk/ActivityDefinition/NHSDiabetesPreventionProgrammeAssessment",
-          "_definitionCanonical": {
-            "extension": [
-              {
-                "url": "http://england.nhs.uk/fhir/StructureDefinition/workflow-supportingInfo",
-                "valueReference": {
-                  "display": "Diabetes UK Risk Asssement"
-                }
-              }
-            ]
-          },
           "action": [
             {
-              "id": "NHSDiabetesPreventionProgrammeReferral",
-              "title": "NHS Diabetes Prevention Programme Referral",
-              "description": "If the `e-Referral Service` (which supports `FHIR Workflow`) is used, the `QuestionnaireResponse` should be converted to PDF and uploaded to eRS using the `documents` framework. \n\n The official process for this referral and report is to use NHS email and exchange the referral and report as a PDF attachment.",
-              "goalId": [
-                "reduce-bmi-ratio"
-              ],
-              "requiredBehavior": "must-unless-documented",
-              "cardinalityBehavior": "single",
+              "id": "PhysicalActivity",
+              "title": "Physical Activity Referral",
+              "description": "Referral to a Gym or NHS Provider.",
               "code": [
                 {
                   "coding": [
                     {
                       "system": "http://snomed.info/sct",
-                      "code": "306206005"
+                      "code": "3457005",
+                      "display": "Patient referral"
                     }
-                  ],
-                  "text": "Referral to service (procedure)"
+                  ]
                 }
               ],
               "input": [
@@ -360,7 +300,71 @@
                     }
                   ],
                   "type": "QuestionnaireResponse"
-                },
+                }
+              ],
+              "output": [
+                {
+                  "type": "ServiceRequest"
+                }
+              ],
+              "action": [
+                {
+                  "id": "PhysicalActivityIntervention",
+                  "title": "Physical Activity Intervention",
+                  "description": "The expected output of this referral to be shared with the referrer is a `DiagnosticReport`  with an included PDF Attachment. No UK guidance on this pathway has been found, the [US Physical Activity Implementation Guide](http://build.fhir.org/ig/HL7/physical-activity/index.html) may define a suitable approach.",
+                  "code": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://snomed.info/sct",
+                          "code": "225334002",
+                          "display": "Intervention regime"
+                        }
+                      ]
+                    }
+                  ],
+                  "input": [
+                    {
+                      "type": "ServiceRequest"
+                    }
+                  ],
+                  "output": [
+                    {
+                      "type": "Observation"
+                    },
+                    {
+                      "type": "DiagnosticReport"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "DiabetesRiskAssessment",
+              "title": "Diabetes UK Risk Assessment",
+              "description": "It is recommended the Diabetes Risk Assessment is performed using `FHIR Structured Data Capture` to make use of existing data and enable workflow automation. If Diabetes UK Assessment is used instead, then the completed form should be stored as screenshot and then stored in clinical records using the `documents` framework. \n\n If the risk is deemed as significant then the referral to Diabetes Prevention Programme may follow.",
+              "goalId": [
+                "reduce-bmi-ratio"
+              ],
+              "requiredBehavior": "must-unless-documented",
+              "cardinalityBehavior": "single",
+              "code": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "310813001",
+                      "display": "Observational assessment"
+                    }
+                  ]
+                }
+              ],
+              "input": [
+                {
+                  "type": "Questionnaire"
+                }
+              ],
+              "output": [
                 {
                   "extension": [
                     {
@@ -373,12 +377,101 @@
                   "type": "QuestionnaireResponse"
                 }
               ],
-              "output": [
+              "definitionCanonical": "https://fhir.england.nhs.uk/ActivityDefinition/NHSDiabetesPreventionProgrammeAssessment",
+              "_definitionCanonical": {
+                "extension": [
+                  {
+                    "url": "http://england.nhs.uk/fhir/StructureDefinition/workflow-supportingInfo",
+                    "valueReference": {
+                      "display": "Diabetes UK Risk Asssement"
+                    }
+                  }
+                ]
+              },
+              "action": [
                 {
-                  "type": "DiagnosticReport"
+                  "id": "NHSDiabetesPreventionProgrammeReferral",
+                  "title": "NHS Diabetes Prevention Programme Referral",
+                  "description": "If the `e-Referral Service` (which supports `FHIR Workflow`) is used, the `QuestionnaireResponse` should be converted to PDF and uploaded to eRS using the `documents` framework. \n\n The official process for this referral and report is to use NHS email and exchange the referral and report as a PDF attachment.",
+                  "goalId": [
+                    "reduce-bmi-ratio"
+                  ],
+                  "requiredBehavior": "must-unless-documented",
+                  "cardinalityBehavior": "single",
+                  "code": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://snomed.info/sct",
+                          "code": "306206005"
+                        }
+                      ],
+                      "text": "Referral to service (procedure)"
+                    }
+                  ],
+                  "input": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://england.nhs.uk/fhir/StructureDefinition/workflow-supportingInfo",
+                          "valueReference": {
+                            "display": "Vital Signs"
+                          }
+                        }
+                      ],
+                      "type": "QuestionnaireResponse"
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://england.nhs.uk/fhir/StructureDefinition/workflow-supportingInfo",
+                          "valueReference": {
+                            "display": "Type 2 Diabetes Risk Assessment"
+                          }
+                        }
+                      ],
+                      "type": "QuestionnaireResponse"
+                    }
+                  ],
+                  "output": [
+                    {
+                      "type": "ServiceRequest"
+                    }
+                  ],
+                  "definitionCanonical": "https://fhir.england.nhs.uk/ActivityDefinition/NHSDiabetesPreventionProgrammeReferral",
+                  "action": [
+                    {
+                      "id": "DiabetesIntervention",
+                      "title": "NHS Diabetes Prevention Programme Intervention",
+                      "description": "The expected output of this referral to be shared with the referrer is a `DiagnosticReport` with an included PDF Attachment.",
+                      "code": [
+                        {
+                          "coding": [
+                            {
+                              "system": "http://snomed.info/sct",
+                              "code": "225334002",
+                              "display": "Intervention regime"
+                            }
+                          ]
+                        }
+                      ],
+                      "input": [
+                        {
+                          "type": "ServiceRequest"
+                        }
+                      ],
+                      "output": [
+                        {
+                          "type": "Observation"
+                        },
+                        {
+                          "type": "DiagnosticReport"
+                        }
+                      ]
+                    }
+                  ]
                 }
-              ],
-              "definitionCanonical": "https://fhir.england.nhs.uk/ActivityDefinition/NHSDiabetesPreventionProgrammeReferral"
+              ]
             }
           ]
         }
