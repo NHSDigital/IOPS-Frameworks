@@ -3,12 +3,7 @@
     "id": "5cbc7189-8029-4322-b890-9e0c918af4a5",
     "meta": {
       "versionId": "21",
-      "lastUpdated": "2023-04-14T13:09:39.266Z",
-      "tag": [
-        {
-          "code": "lformsVersion: 29.0.0"
-        }
-      ]
+      "lastUpdated": "2023-04-14T13:09:39.266Z"
     },
     "url": "https://example.fhir.nhs.uk/Questionnaire/T2DRiskForm",
     "identifier": [

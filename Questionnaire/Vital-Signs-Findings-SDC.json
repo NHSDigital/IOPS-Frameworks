@@ -8,9 +8,6 @@
       {
         "system": "https://example.fhir.uk/lformsVersion",
         "code": "29.0.0"
-      },
-      {
-        "code": "lformsVersion: 29.0.0"
       }
     ]
   },
