@@ -2,7 +2,7 @@
   "resourceType": "QuestionnaireResponse",
   "status": "completed",
   "authored": "2023-02-24T07:29:15.300Z",
-  "questionnaire": "https://example.fhir.nhs.uk/Questionnaire/KansasCityCardiomyopathyQuestionnaire",
+  "questionnaire": "https://example.fhir.nhs.uk/Questionnaire/86923-0",
   "identifier": {
     "system": "https://tools.ietf.org/html/rfc4122",
     "value": "56694b60-f3ba-4214-9868-d63d649f4bf0"
