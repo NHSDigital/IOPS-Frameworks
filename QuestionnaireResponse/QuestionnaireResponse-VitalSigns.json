@@ -19,7 +19,7 @@
         "answer": [
           {
             "valueQuantity": {
-              "value": 98,
+              "value": 98.0,
               "unit": "percent",
               "system": "http://unitsofmeasure.org",
               "code": "%"
@@ -47,7 +47,7 @@
         "answer": [
           {
             "valueQuantity": {
-              "value": 59,
+              "value": 59.0,
               "unit": "centimeter",
               "system": "http://unitsofmeasure.org",
               "code": "cm"
@@ -61,7 +61,7 @@
         "answer": [
           {
             "valueQuantity": {
-              "value": 179,
+              "value": 179.0,
               "unit": "centimeter",
               "system": "http://unitsofmeasure.org",
               "code": "cm"
@@ -75,7 +75,7 @@
         "answer": [
           {
             "valueQuantity": {
-              "value": 37,
+              "value": 37.0,
               "unit": "degree Celsius",
               "system": "http://unitsofmeasure.org",
               "code": "Cel"
@@ -89,7 +89,7 @@
         "answer": [
           {
             "valueQuantity": {
-              "value": 120,
+              "value": 120.0,
               "unit": "millimeter of mercury",
               "system": "http://unitsofmeasure.org",
               "code": "mm[Hg]"
@@ -103,7 +103,7 @@
         "answer": [
           {
             "valueQuantity": {
-              "value": 80,
+              "value": 80.0,
               "unit": "millimeter of mercury",
               "system": "http://unitsofmeasure.org",
               "code": "mm[Hg]"
@@ -117,7 +117,7 @@
         "answer": [
           {
             "valueQuantity": {
-              "value": 61,
+              "value": 61.0,
               "unit": "heart beats per minute",
               "system": "http://unitsofmeasure.org",
               "code": "{beats}/min"
