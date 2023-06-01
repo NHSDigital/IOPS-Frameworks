@@ -12,7 +12,7 @@
     }
   ],
   "status": "draft",
-  "url": "https://example.fhir.nhs.uk/Questionnaire/118227000",
+  "url": "https://example.fhir.nhs.uk/Questionnaire/VitalSignsFinding",
   "title": "Vital signs finding",
   "resourceType": "Questionnaire",
   "item": [
