@@ -3,12 +3,9 @@
     "id": "ca2ecf9c-6bf9-49f7-a41f-bc11ead73d14",
     "meta": {
       "versionId": "1",
-      "lastUpdated": "2023-05-31T14:21:29.806Z",
-      "profile": [
-        "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse|2.7"
-      ]
+      "lastUpdated": "2023-05-31T14:21:29.806Z"
     },
-    "questionnaire": "Questionnaire/0d9fccea-9c98-4e61-b3e0-bc9b3a9db675",
+    "questionnaire": "https://example.fhir.nhs.uk/Questionnaire/118227000",
     "status": "completed",
     "subject": {
       "reference": "Patient/b573262f-a1d7-4083-891a-7edd71bc459e",

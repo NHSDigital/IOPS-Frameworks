@@ -3,12 +3,9 @@
     "id": "ec6da383-e3ee-4485-ab4c-2f483164b869",
     "meta": {
       "versionId": "1",
-      "lastUpdated": "2023-05-31T14:26:22.986Z",
-      "profile": [
-        "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse|2.7"
-      ]
+      "lastUpdated": "2023-05-31T14:26:22.986Z"
     },
-    "questionnaire": "Questionnaire/5cbc7189-8029-4322-b890-9e0c918af4a5",
+    "questionnaire": "https://example.fhir.nhs.uk/Questionnaire/T2DRiskForm",
     "status": "completed",
     "subject": {
       "reference": "Patient/b573262f-a1d7-4083-891a-7edd71bc459e",
