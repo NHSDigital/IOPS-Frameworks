@@ -32,8 +32,8 @@
             },
             "resource": [
                 {
-                    "type": "Questionnaire",
-                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Questionnaire"
+                    "type": "Task",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/Framework-Task"
                 }
             ]
         }
