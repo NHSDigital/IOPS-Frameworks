@@ -20,12 +20,6 @@
   ],
   "kind": "complex-type",
   "abstract": false,
-  "context": [
-    {
-      "type": "element",
-      "expression": "Element"
-    }
-  ],
   "type": "Extension",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
   "derivation": "constraint",
