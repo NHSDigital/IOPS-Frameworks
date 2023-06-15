@@ -7,7 +7,7 @@
   "purpose": "Short spike into openEHR and FHIR Interoperability",
   "code": [
     {
-      "system": "ttp://snomed.info/sct",
+      "system": "http://snomed.info/sct",
       "code": "1515851000000101",
       "display": "About me (record artifact)"
     }
@@ -100,5 +100,4 @@
       ]
     }
   ]
-  
 }
