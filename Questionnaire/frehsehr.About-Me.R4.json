@@ -1,0 +1,104 @@
+{
+  "resourceType": "Questionnaire",
+  "url": "https://example.fhir.openehr.org/Template/openEHR-EHR-COMPOSITION.anticipatory_care_information.v0",
+  "title": "About Me",
+  "status": "draft",
+  "description": "A framework to communicate information that has been captured and curated in anticipation of future need for care.",
+  "purpose": "Short spike into openEHR and FHIR Interoperability",
+  "code": [
+    {
+      "system": "ttp://snomed.info/sct",
+      "code": "1515851000000101",
+      "display": "About me (record artifact)"
+    }
+  ],
+  "item": [
+    {
+      "type": "text",
+      "linkId": "what_is_most_important_to_me",
+      "text": "What is most important to me",
+      "required": false,
+      "repeats": false
+    },
+    {
+      "type": "text",
+      "linkId": "people_who_are_important_to_me",
+      "text": "People who are important to me",
+      "required": false,
+      "repeats": false
+    },
+    {
+      "type": "text",
+      "linkId": "how_i_communicate_and_how_to_communicate_with_me",
+      "text": "How I communicate and how to communicate with me",
+      "required": false,
+      "repeats": false
+    },
+    {
+      "type": "text",
+      "linkId": "please_do_and_please_dont",
+      "text": "Please do and please dont",
+      "required": false,
+      "repeats": false
+    },
+    {
+      "type": "text",
+      "linkId": "my_wellness",
+      "text": "My wellness",
+      "required": false,
+      "repeats": false
+    },
+    {
+      "type": "text",
+      "linkId": "how_and_when_to_support_me",
+      "text": "How and when to support me",
+      "required": false,
+      "repeats": false
+    },
+    {
+      "type": "text",
+      "linkId": "also_worth_knowing_about_me",
+      "text": "Also worth knowing about me",
+      "required": false,
+      "repeats": false
+    },
+    {
+      "type": "text",
+      "linkId": "8075941263525",
+      "text": "About me attachment",
+      "required": false,
+      "repeats": false,
+      "item": [
+        {
+          "type": "text",
+          "linkId": "resource_name",
+          "text": "Resource name",
+          "required": false,
+          "repeats": false
+        },
+        {
+          "type": "text",
+          "linkId": "descriptio",
+          "text": "Description",
+          "required": false,
+          "repeats": false
+        },
+        {
+          "type": "text",
+          "linkId": "content",
+          "text": "Content",
+          "required": false,
+          "repeats": false
+        },
+        {
+          "type": "dateTime",
+          "linkId": "created",
+          "text": "Created",
+          "required": false,
+          "repeats": false
+        }
+      ]
+    }
+  ]
+  
+}
