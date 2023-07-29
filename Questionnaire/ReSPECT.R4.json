@@ -110,9 +110,6 @@
       "text": "Clinical recommendations",
       "item": [
         {
-          "type": "group",
-          "linkId": "7950333819072",
-          "text": "Recommendation",
           "item": [
             {
               "type": "string",
@@ -149,34 +146,192 @@
               "linkId": "5712690658400",
               "text": "Clinical guidance on interventions"
             }
+          ],
+          "type": "group",
+          "linkId": "7950333819072",
+          "text": "Recommendation"
+        },
+        {
+          "type": "group",
+          "linkId": "4900245503228",
+          "text": "CPR decision",
+          "item": [
+            {
+              "type": "choice",
+              "linkId": "6194338778785",
+              "text": "CPR decision"
+            },
+            {
+              "type": "dateTime",
+              "linkId": "6788228603760",
+              "text": "Date of CPR decision"
+            }
           ]
         }
       ]
     },
     {
-      "type": "display",
+      "type": "group",
       "linkId": "8502417857260",
-      "text": "Capacity for involvement"
+      "text": "Capacity for involvement",
+      "item": [
+        {
+          "type": "group",
+          "linkId": "1627782478976",
+          "text": "Mental capacity",
+          "item": [
+            {
+              "type": "text",
+              "linkId": "1946967195753",
+              "text": "Decision/plan"
+            },
+            {
+              "type": "choice",
+              "linkId": "1554704924421",
+              "text": "Does the person have capacity to participate in making recommendations on this plan?",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Has capacity"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Does not have capacity"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "linkId": "385690544151",
+              "text": "If no, in what way does this person lack capacity?"
+            }
+          ]
+        }
+      ]
     },
     {
-      "type": "display",
+      "type": "group",
       "linkId": "4824250476684",
-      "text": "Involvement in making plan"
+      "text": "Involvement in making plan",
+      "item": [
+        {
+          "type": "group",
+          "linkId": "971946188828",
+          "text": "ReSPECT involvement",
+          "item": [
+            {
+              "type": "choice",
+              "linkId": "5039098111353",
+              "text": "Involvement",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "A",
+                    "display": "Person has mental capacity"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "B",
+                    "display": "Person does not have mental capacity"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "C1",
+                    "display": "Person less than 18 or 16 with sufficient"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "C2",
+                    "display": "Person less than 18 or 16 without sufficient"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "C3",
+                    "display": "Person less than 18 or 16 parental d"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "linkId": "942556910304",
+              "text": "Option D"
+            }
+          ]
+        }
+      ]
     },
     {
-      "type": "display",
+      "type": "group",
       "linkId": "8812984985229",
-      "text": "Clinician signatures"
+      "text": "Clinician signatures",
+      "item": [
+        {
+          "type": "group",
+          "linkId": "6532868335511",
+          "text": "Clinical Signature",
+          "repeats": true,
+          "item": [
+            {
+              "type": "choice",
+              "linkId": "3640427889643",
+              "text": "Service Name",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "clinical-signature",
+                    "display": "ReSPECT - clinical signature"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "senior-responsible-clinical-signature",
+                    "display": "ReSPECT - senior responsible clinical signature"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
-      "type": "display",
+      "type": "group",
       "linkId": "8488452075692",
-      "text": "Emergency contacts"
+      "text": "Emergency contacts",
+      "item": [
+        {
+          "type": "string",
+          "linkId": "7395725931613",
+          "text": "Care Team"
+        }
+      ]
     },
     {
-      "type": "display",
+      "type": "group",
       "linkId": "2445307069824",
-      "text": "Review of Plan"
+      "text": "Review of Plan",
+      "item": [
+        {
+          "item": [
+            {
+              "type": "string",
+              "linkId": "6043503381422",
+              "text": "Service Name"
+            }
+          ],
+          "type": "group",
+          "linkId": "2406541432542",
+          "text": "Review of plan"
+        }
+      ]
     }
   ],
   "resourceType": "Questionnaire",
