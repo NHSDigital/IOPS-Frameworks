@@ -158,8 +158,67 @@
           "item": [
             {
               "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationLinkPeriod",
+                  "valueDuration": {
+                    "value": 1,
+                    "unit": "years",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "a"
+                  }
+                },
+                {
+                  "valueBoolean": true,
+                  "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract"
+                }
+              ],
               "linkId": "6194338778785",
-              "text": "CPR decision"
+              "code": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "365870005",
+                  "display": "Finding of resuscitation status"
+                }
+              ],
+              "text": "CPR decision",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "143021000119109",
+                    "display": "Do not resuscitate status with supporting documentation (finding)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "304252001",
+                    "display": "For resuscitation (finding)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "304253006",
+                    "display": "Not for resuscitation (finding)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "450475007",
+                    "display": "For cardiopulmonary resuscitation (finding)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "450476008",
+                    "display": "Not for cardiopulmonary resuscitation (finding)"
+                  }
+                }
+              ]
             },
             {
               "type": "dateTime",
