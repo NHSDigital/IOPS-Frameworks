@@ -1,9 +1,6 @@
 {
     "resourceType": "ValueSet",
     "id": "d11970b8-a92f-4a86-b570-e7afd590cb59",
-    "text": {
-      "status": "generated"
-    },
     "url": "https://fhir.nhs.uk/ValueSet/EOL-CPRStatus-Code",
     "version": "1.0.0",
     "name": "EOLCPRStatusCode",

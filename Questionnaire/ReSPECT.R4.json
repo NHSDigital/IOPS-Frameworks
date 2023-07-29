@@ -1,24 +1,46 @@
 {
+  "resourceType": "Questionnaire",
+  "id": "5649c125-3728-4194-a73f-1672f1d66304",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2023-07-29T05:58:15.459Z"
+  },
+  "url": "https://example.fhir.nhs.uk/Questionnaire/ReSPECT",
+  "identifier": [
+    {
+      "system": "http://snomed.info/sct",
+      "value": "1382601000000107"
+    }
+  ],
+  "title": "ReSPECT",
+  "status": "draft",
+  "description": "ReSPECT - Recommended Summary Plan for Emergency Care and Treatment.",
+  "purpose": "Representing the dataset for capture, reporting and auditing the details of ReSPECT - Recommended Summary Plan for Emergency Care and Treatment. https://www.resus.org.uk/respect/",
+  "code": [
+    {
+      "system": "http://snomed.info/sct",
+      "code": "1382601000000107",
+      "display": "ReSPECT (Recommended Summary Plan for Emergency Care and Treatment) form"
+    }
+  ],
   "item": [
     {
+      "linkId": "4692475953025",
+      "text": "Shared understanding",
+      "type": "group",
       "item": [
         {
-          "type": "string",
           "linkId": "2554609755642",
           "text": "ReSPECT Summary",
+          "type": "string",
           "required": true
         },
         {
+          "linkId": "9646768545691",
+          "text": "Details of other relevant care planning documents and where to find them",
+          "type": "group",
           "item": [
             {
-              "item": [
-                {
-                  "type": "string",
-                  "linkId": "2835143121518",
-                  "text": "Description"
-                }
-              ],
-              "type": "group",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
@@ -36,26 +58,38 @@
               ],
               "linkId": "9646768545691_helpText",
               "text": "Advance planning document",
-              "repeats": true
-            }
-          ],
-          "type": "group",
-          "linkId": "9646768545691",
-          "text": "Details of other relevant care planning documents and where to find them"
-        },
-        {
-          "item": [
-            {
+              "type": "group",
+              "repeats": true,
               "item": [
                 {
-                  "type": "string",
+                  "linkId": "2835143121518",
+                  "text": "Description",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "3313974242770",
+          "text": "Legal welfare proxies",
+          "type": "string",
+          "item": [
+            {
+              "linkId": "9769677029653",
+              "text": "Legal welfare proxy in place",
+              "type": "group",
+              "repeats": true,
+              "item": [
+                {
                   "linkId": "6121442206090",
-                  "text": "Type"
+                  "text": "Type",
+                  "type": "string"
                 },
                 {
-                  "type": "choice",
                   "linkId": "8143298459836",
                   "text": "Status",
+                  "type": "choice",
                   "answerOption": [
                     {
                       "valueCoding": {
@@ -71,55 +105,48 @@
                     }
                   ]
                 }
-              ],
-              "type": "group",
-              "linkId": "9769677029653",
-              "text": "Legal welfare proxy in place",
-              "repeats": true
+              ]
             }
-          ],
-          "type": "string",
-          "linkId": "3313974242770",
-          "text": "Legal welfare proxies"
-        }
-      ],
-      "type": "group",
-      "linkId": "4692475953025",
-      "text": "Shared understanding"
-    },
-    {
-      "type": "group",
-      "linkId": "8531567750091",
-      "text": "What matters to me",
-      "item": [
-        {
-          "type": "string",
-          "linkId": "5090977699027",
-          "text": "What I most value"
-        },
-        {
-          "type": "string",
-          "linkId": "914986869542",
-          "text": "What I most fear / wish to avoid"
+          ]
         }
       ]
     },
     {
+      "linkId": "8531567750091",
+      "text": "What matters to me",
       "type": "group",
-      "linkId": "1743377747905",
-      "text": "Clinical recommendations",
       "item": [
         {
+          "linkId": "5090977699027",
+          "text": "What I most value",
+          "type": "string"
+        },
+        {
+          "linkId": "914986869542",
+          "text": "What I most fear / wish to avoid",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "linkId": "1743377747905",
+      "text": "Clinical recommendations",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "7950333819072",
+          "text": "Recommendation",
+          "type": "group",
           "item": [
             {
-              "type": "string",
               "linkId": "8477092546793",
-              "text": "Topic"
+              "text": "Topic",
+              "type": "string"
             },
             {
-              "type": "choice",
               "linkId": "7415469232414",
               "text": "Clinical focus",
+              "type": "choice",
               "answerOption": [
                 {
                   "valueCoding": {
@@ -142,22 +169,18 @@
               ]
             },
             {
-              "type": "string",
               "linkId": "5712690658400",
-              "text": "Clinical guidance on interventions"
+              "text": "Clinical guidance on interventions",
+              "type": "string"
             }
-          ],
-          "type": "group",
-          "linkId": "7950333819072",
-          "text": "Recommendation"
+          ]
         },
         {
-          "type": "group",
           "linkId": "4900245503228",
           "text": "CPR decision",
+          "type": "group",
           "item": [
             {
-              "type": "choice",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationLinkPeriod",
@@ -169,8 +192,8 @@
                   }
                 },
                 {
-                  "valueBoolean": true,
-                  "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract"
+                  "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract",
+                  "valueBoolean": true
                 }
               ],
               "linkId": "6194338778785",
@@ -182,6 +205,7 @@
                 }
               ],
               "text": "CPR decision",
+              "type": "choice",
               "answerOption": [
                 {
                   "valueCoding": {
@@ -221,33 +245,33 @@
               ]
             },
             {
-              "type": "dateTime",
               "linkId": "6788228603760",
-              "text": "Date of CPR decision"
+              "text": "Date of CPR decision",
+              "type": "dateTime"
             }
           ]
         }
       ]
     },
     {
-      "type": "group",
       "linkId": "8502417857260",
       "text": "Capacity for involvement",
+      "type": "group",
       "item": [
         {
-          "type": "group",
           "linkId": "1627782478976",
           "text": "Mental capacity",
+          "type": "group",
           "item": [
             {
-              "type": "text",
               "linkId": "1946967195753",
-              "text": "Decision/plan"
+              "text": "Decision/plan",
+              "type": "text"
             },
             {
-              "type": "choice",
               "linkId": "1554704924421",
               "text": "Does the person have capacity to participate in making recommendations on this plan?",
+              "type": "choice",
               "answerOption": [
                 {
                   "valueCoding": {
@@ -262,28 +286,28 @@
               ]
             },
             {
-              "type": "string",
               "linkId": "385690544151",
-              "text": "If no, in what way does this person lack capacity?"
+              "text": "If no, in what way does this person lack capacity?",
+              "type": "string"
             }
           ]
         }
       ]
     },
     {
-      "type": "group",
       "linkId": "4824250476684",
       "text": "Involvement in making plan",
+      "type": "group",
       "item": [
         {
-          "type": "group",
           "linkId": "971946188828",
           "text": "ReSPECT involvement",
+          "type": "group",
           "item": [
             {
-              "type": "choice",
               "linkId": "5039098111353",
               "text": "Involvement",
+              "type": "choice",
               "repeats": true,
               "answerOption": [
                 {
@@ -319,29 +343,29 @@
               ]
             },
             {
-              "type": "string",
               "linkId": "942556910304",
-              "text": "Option D"
+              "text": "Option D",
+              "type": "string"
             }
           ]
         }
       ]
     },
     {
-      "type": "group",
       "linkId": "8812984985229",
       "text": "Clinician signatures",
+      "type": "group",
       "item": [
         {
-          "type": "group",
           "linkId": "6532868335511",
           "text": "Clinical Signature",
+          "type": "group",
           "repeats": true,
           "item": [
             {
-              "type": "choice",
               "linkId": "3640427889643",
               "text": "Service Name",
+              "type": "choice",
               "answerOption": [
                 {
                   "valueCoding": {
@@ -362,48 +386,35 @@
       ]
     },
     {
-      "type": "group",
       "linkId": "8488452075692",
       "text": "Emergency contacts",
+      "type": "group",
       "item": [
         {
-          "type": "string",
           "linkId": "7395725931613",
-          "text": "Care Team"
+          "text": "Care Team",
+          "type": "string"
         }
       ]
     },
     {
-      "type": "group",
       "linkId": "2445307069824",
       "text": "Review of Plan",
+      "type": "group",
       "item": [
         {
+          "linkId": "2406541432542",
+          "text": "Review of plan",
+          "type": "group",
           "item": [
             {
-              "type": "string",
               "linkId": "6043503381422",
-              "text": "Service Name"
+              "text": "Service Name",
+              "type": "string"
             }
-          ],
-          "type": "group",
-          "linkId": "2406541432542",
-          "text": "Review of plan"
+          ]
         }
       ]
-    }
-  ],
-  "resourceType": "Questionnaire",
-  "url": "https://example.fhir.nhs.uk/Questionnaire/ReSPECT",
-  "title": "ReSPECT",
-  "status": "draft",
-  "description": "ReSPECT - Recommended Summary Plan for Emergency Care and Treatment.",
-  "purpose": "Representing the dataset for capture, reporting and auditing the details of ReSPECT - Recommended Summary Plan for Emergency Care and Treatment. https://www.resus.org.uk/respect/",
-  "code": [
-    {
-      "system": "http://snomed.info/sct",
-      "code": "1382601000000107",
-      "display": "ReSPECT (Recommended Summary Plan for Emergency Care and Treatment) form"
     }
   ]
 }
