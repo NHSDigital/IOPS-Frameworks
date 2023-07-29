@@ -4,7 +4,7 @@
     "text": {
       "status": "generated"
     },
-    "url": "https://fhir.nhs.uk/STU3/ValueSet/EOL-CPRStatus-Code",
+    "url": "https://fhir.nhs.uk/ValueSet/EOL-CPRStatus-Code",
     "version": "1.0.0",
     "name": "EOLCPRStatusCode",
     "status": "active",
