@@ -1,0 +1,195 @@
+{
+  "item": [
+    {
+      "item": [
+        {
+          "type": "string",
+          "linkId": "2554609755642",
+          "text": "ReSPECT Summary",
+          "required": true
+        },
+        {
+          "item": [
+            {
+              "item": [
+                {
+                  "type": "string",
+                  "linkId": "2835143121518",
+                  "text": "Description"
+                }
+              ],
+              "type": "group",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ],
+              "linkId": "9646768545691_helpText",
+              "text": "Advance planning document",
+              "repeats": true
+            }
+          ],
+          "type": "group",
+          "linkId": "9646768545691",
+          "text": "Details of other relevant care planning documents and where to find them"
+        },
+        {
+          "item": [
+            {
+              "item": [
+                {
+                  "type": "string",
+                  "linkId": "6121442206090",
+                  "text": "Type"
+                },
+                {
+                  "type": "choice",
+                  "linkId": "8143298459836",
+                  "text": "Status",
+                  "answerOption": [
+                    {
+                      "valueCoding": {
+                        "code": "present",
+                        "display": "Present"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "absent",
+                        "display": "Absent"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "type": "group",
+              "linkId": "9769677029653",
+              "text": "Legal welfare proxy in place",
+              "repeats": true
+            }
+          ],
+          "type": "string",
+          "linkId": "3313974242770",
+          "text": "Legal welfare proxies"
+        }
+      ],
+      "type": "group",
+      "linkId": "4692475953025",
+      "text": "Shared understanding"
+    },
+    {
+      "type": "group",
+      "linkId": "8531567750091",
+      "text": "What matters to me",
+      "item": [
+        {
+          "type": "string",
+          "linkId": "5090977699027",
+          "text": "What I most value"
+        },
+        {
+          "type": "string",
+          "linkId": "914986869542",
+          "text": "What I most fear / wish to avoid"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "linkId": "1743377747905",
+      "text": "Clinical recommendations",
+      "item": [
+        {
+          "type": "group",
+          "linkId": "7950333819072",
+          "text": "Recommendation",
+          "item": [
+            {
+              "type": "string",
+              "linkId": "8477092546793",
+              "text": "Topic"
+            },
+            {
+              "type": "choice",
+              "linkId": "7415469232414",
+              "text": "Clinical focus",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "extending",
+                    "display": "Prioritise extending life"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "balance",
+                    "display": "Balance extending life with comfort and extended values"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "comfort",
+                    "display": "Prioritise comfort"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "linkId": "5712690658400",
+              "text": "Clinical guidance on interventions"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "display",
+      "linkId": "8502417857260",
+      "text": "Capacity for involvement"
+    },
+    {
+      "type": "display",
+      "linkId": "4824250476684",
+      "text": "Involvement in making plan"
+    },
+    {
+      "type": "display",
+      "linkId": "8812984985229",
+      "text": "Clinician signatures"
+    },
+    {
+      "type": "display",
+      "linkId": "8488452075692",
+      "text": "Emergency contacts"
+    },
+    {
+      "type": "display",
+      "linkId": "2445307069824",
+      "text": "Review of Plan"
+    }
+  ],
+  "resourceType": "Questionnaire",
+  "url": "https://example.fhir.nhs.uk/Questionnaire/ReSPECT",
+  "title": "ReSPECT",
+  "status": "draft",
+  "description": "ReSPECT - Recommended Summary Plan for Emergency Care and Treatment.",
+  "purpose": "Representing the dataset for capture, reporting and auditing the details of ReSPECT - Recommended Summary Plan for Emergency Care and Treatment. https://www.resus.org.uk/respect/",
+  "code": [
+    {
+      "system": "http://snomed.info/sct",
+      "code": "1382601000000107",
+      "display": "ReSPECT (Recommended Summary Plan for Emergency Care and Treatment) form"
+    }
+  ]
+}
