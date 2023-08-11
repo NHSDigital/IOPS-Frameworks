@@ -591,7 +591,7 @@
               "text": "Preferred Place Of Death (Coded)",
               "type": "choice",
               "enableBehavior": "any",
-              "answerValueSet": "https://fhir.nhs.uk/STU3/ValueSet/EOL-PreferredPlaceDeath-Code-1"
+              "answerValueSet": "https://fhir.nhs.uk/ValueSet/EOL-PreferredPlaceDeath-Code"
             },
             {
               "extension": [
