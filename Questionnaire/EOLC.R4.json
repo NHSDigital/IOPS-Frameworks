@@ -2,8 +2,8 @@
   "resourceType": "Questionnaire",
   "id": "61bfa8e9-41f8-4cb0-a9fb-36848b35eb85",
   "meta": {
-    "versionId": "1",
-    "lastUpdated": "2023-08-11T14:34:58.543Z"
+    "versionId": "4",
+    "lastUpdated": "2023-08-11T14:51:13.695Z"
   },
   "url": "https://fhir.nhs.uk/Questionnaire/EOLC",
   "identifier": [
@@ -234,7 +234,29 @@
       "enableBehavior": "any",
       "item": [
         {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract",
+              "valueBoolean": true
+            },
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationLinkPeriod",
+              "valueDuration": {
+                "value": 10,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            }
+          ],
           "linkId": "CPR001.1",
+          "code": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "365870005",
+              "display": "Finding of resuscitation status"
+            }
+          ],
           "text": "CPR Status",
           "type": "choice",
           "enableBehavior": "any",
@@ -617,13 +639,55 @@
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/designNote",
                   "valueMarkdown": "Coded value of the preferred place of death.  Includes some codes to indicate that there is not yet (and maybe cannot be) a decision from the patient."
+                },
+                {
+                  "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationLinkPeriod",
+                  "valueDuration": {
+                    "value": 10,
+                    "unit": "years",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "a"
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract",
+                  "valueBoolean": true
                 }
               ],
               "linkId": "PRE001.1.2",
+              "code": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "395091006",
+                  "display": "Preferred place of death"
+                }
+              ],
               "text": "Preferred Place Of Death (Coded)",
               "type": "choice",
               "enableBehavior": "any",
-              "answerValueSet": "https://fhir.nhs.uk/ValueSet/EOL-PreferredPlaceDeath-Code"
+              "answerValueSet": "https://fhir.nhs.uk/ValueSet/EOL-PreferredPlaceDeath-Code",
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ],
+                  "linkId": "PRE001.1.2_helpText",
+                  "text": "Notes associated with the PPD code or, if not coded, text to describe the patient's preferred place of death.  Examples include: + Care Home + Community Hospital + Home + Hospice + Hospital + Learning disability unit + Mental health unit + Not Yet Discussed + Nursing home + Patient Not Able To Discuss + Patient Not Wishing To State Preference + Residential home + \\\"Other\\\" plus text",
+                  "type": "display"
+                }
+              ]
             },
             {
               "extension": [
