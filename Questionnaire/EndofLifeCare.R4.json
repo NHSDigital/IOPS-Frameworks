@@ -2,8 +2,8 @@
   "resourceType": "Questionnaire",
   "id": "61bfa8e9-41f8-4cb0-a9fb-36848b35eb85",
   "meta": {
-    "versionId": "4",
-    "lastUpdated": "2023-08-11T14:51:13.695Z"
+    "versionId": "5",
+    "lastUpdated": "2023-08-11T15:05:14.980Z"
   },
   "url": "https://fhir.nhs.uk/Questionnaire/EOLC",
   "identifier": [
@@ -33,10 +33,6 @@
   ],
   "item": [
     {
-      "linkId": "ATP",
-      "text": "Advanced Treatment Preferences",
-      "type": "group",
-      "enableBehavior": "any",
       "item": [
         {
           "extension": [
@@ -64,13 +60,26 @@
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/designNote",
                   "valueMarkdown": "Description of the problem or the condition.  Either a diagnosis or description of an event that could actually happen  eg. breathlessness, fits, delerium, worsening oral intake of foods and fluids"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "autocomplete",
+                        "display": "Auto-complete"
+                      }
+                    ]
+                  }
                 }
               ],
               "linkId": "ATP001.1.1",
               "text": "ATP Problems",
-              "type": "reference",
+              "type": "choice",
               "enableBehavior": "any",
-              "required": true
+              "required": true,
+              "answerValueSet": "https://fhir.hl7.org.uk/ValueSet/UKCore-ConditionCode"
             },
             {
               "extension": [
@@ -203,7 +212,11 @@
           "enableBehavior": "any",
           "required": true
         }
-      ]
+      ],
+      "type": "group",
+      "linkId": "ATP",
+      "text": "Advanced Treatment Preferences",
+      "enableBehavior": "any"
     },
     {
       "extension": [
