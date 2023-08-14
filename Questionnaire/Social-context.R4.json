@@ -2,8 +2,8 @@
   "resourceType": "Questionnaire",
   "id": "7e09e96a-f1c8-4d8b-ad01-8eed9ff132ca",
   "meta": {
-    "versionId": "6",
-    "lastUpdated": "2023-08-14T12:49:25.232Z"
+    "versionId": "7",
+    "lastUpdated": "2023-08-14T13:04:09.956Z"
   },
   "url": "https://example.fhir.nhs.uk/Questionnaire/163011000000101",
   "identifier": [
@@ -28,28 +28,41 @@
         {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "help",
-                    "display": "Help-Button"
-                  }
-                ],
-                "text": "Help-Button"
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationLinkPeriod",
+              "valueDuration": {
+                "value": 2,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
               }
+            },
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract",
+              "valueBoolean": true
             }
           ],
-          "linkId": "7793249472624_helpText",
-          "text": "Description of the household composition e.g. lives alone, lives with family, lives with partner, shared accommodation etc",
-          "type": "display"
+          "linkId": "7793249472624",
+          "code": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "365481000",
+              "display": "Household composition - finding"
+            }
+          ],
+          "text": "Household composition (coded)",
+          "type": "choice",
+          "repeats": true,
+          "answerValueSet": "https://fhir.nhs.uk/ValueSet/HouseholdComposition"
+        },
+        {
+          "linkId": "890285773997",
+          "text": "Household composition (free text)",
+          "type": "text"
         }
       ],
       "type": "group",
-      "linkId": "7793249472624",
-      "text": "Household composition",
-      "repeats": true
+      "linkId": "1770961441094",
+      "text": "Household Composition"
     },
     {
       "linkId": "8917028970417",
