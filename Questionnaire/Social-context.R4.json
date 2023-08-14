@@ -2,8 +2,8 @@
   "resourceType": "Questionnaire",
   "id": "7e09e96a-f1c8-4d8b-ad01-8eed9ff132ca",
   "meta": {
-    "versionId": "5",
-    "lastUpdated": "2023-08-14T11:42:08.246Z"
+    "versionId": "6",
+    "lastUpdated": "2023-08-14T12:49:25.232Z"
   },
   "url": "https://example.fhir.nhs.uk/Questionnaire/163011000000101",
   "identifier": [
@@ -94,7 +94,6 @@
       "type": "group",
       "item": [
         {
-          "type": "choice",
           "extension": [
             {
               "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationLinkPeriod",
@@ -119,6 +118,7 @@
             }
           ],
           "text": "Smoking Status",
+          "type": "choice",
           "answerOption": [
             {
               "valueCoding": {
@@ -186,15 +186,30 @@
             }
           ],
           "linkId": "7373483344877",
-          "code": [
-            {
-              "system": "http://snomed.info/sct",
-              "code": "160625004",
-              "display": "Date ceased smoking"
-            }
-          ],
           "text": "Date stopped smoking",
-          "type": "date"
+          "type": "date",
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ],
+              "linkId": "7373483344877_helpText",
+              "text": "Removed code entry as this results in extract error 14/8/2023",
+              "type": "display"
+            }
+          ]
         }
       ]
     },
@@ -204,7 +219,6 @@
       "type": "group",
       "item": [
         {
-          "type": "choice",
           "extension": [
             {
               "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract",
@@ -229,13 +243,14 @@
             }
           ],
           "text": "Intake (coded)",
+          "type": "choice",
           "repeats": true,
           "answerValueSet": "https://fhir.nhs.uk/ValueSet/AlcoholIntake"
         },
         {
-          "type": "string",
           "linkId": "9843036047427",
-          "text": "Intake (free text)"
+          "text": "Intake (free text)",
+          "type": "string"
         }
       ]
     },
@@ -245,7 +260,6 @@
       "type": "group",
       "item": [
         {
-          "type": "choice",
           "extension": [
             {
               "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract",
@@ -270,6 +284,7 @@
             }
           ],
           "text": "Use (coded)",
+          "type": "choice",
           "answerValueSet": "https://fhir.nhs.uk/ValueSet/DrugSubstanceUse"
         },
         {
