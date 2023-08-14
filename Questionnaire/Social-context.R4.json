@@ -2,8 +2,8 @@
   "resourceType": "Questionnaire",
   "id": "7e09e96a-f1c8-4d8b-ad01-8eed9ff132ca",
   "meta": {
-    "versionId": "8",
-    "lastUpdated": "2023-08-14T13:34:39.759Z"
+    "versionId": "10",
+    "lastUpdated": "2023-08-14T15:13:59.310Z"
   },
   "url": "https://example.fhir.nhs.uk/Questionnaire/163011000000101",
   "identifier": [
@@ -109,6 +109,11 @@
           "type": "choice",
           "repeats": true,
           "answerValueSet": "https://fhir.nhs.uk/ValueSet/OccupationalHistory"
+        },
+        {
+          "linkId": "9497321031709",
+          "text": "The current and/or previous occupation(s) of the person (free text)",
+          "type": "string"
         }
       ]
     },
@@ -120,7 +125,122 @@
     {
       "linkId": "5677754908042",
       "text": "Meal patterns",
-      "type": "display"
+      "type": "group",
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract",
+              "valueBoolean": true
+            },
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationLinkPeriod",
+              "valueDuration": {
+                "value": 6,
+                "unit": "months",
+                "system": "http://unitsofmeasure.org",
+                "code": "mo"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "autocomplete",
+                    "display": "Auto-complete"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "8922996476098",
+          "code": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "289136006",
+              "display": "Finding of eating pattern"
+            }
+          ],
+          "text": "Meal Patterns",
+          "type": "choice",
+          "repeats": true,
+          "answerValueSet": "https://fhir.nhs.uk/ValueSet/MealPatterns"
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationLinkPeriod",
+              "valueDuration": {
+                "value": 6,
+                "unit": "months",
+                "system": "http://unitsofmeasure.org",
+                "code": "mo"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract",
+              "valueBoolean": true
+            }
+          ],
+          "linkId": "4936391939852",
+          "code": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "42239005",
+              "display": "Carbohydrate diet"
+            }
+          ],
+          "text": "Carbohydrate Intake",
+          "type": "choice",
+          "answerValueSet": "https://fhir.nhs.uk/ValueSet/CarbohydateIntake"
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "g",
+                "display": "gram"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract",
+              "valueBoolean": true
+            },
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationLinkPeriod",
+              "valueDuration": {
+                "value": 6,
+                "unit": "months",
+                "system": "http://unitsofmeasure.org",
+                "code": "mo"
+              }
+            }
+          ],
+          "linkId": "6990224603082",
+          "code": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "1003631002",
+              "display": "Estimated quantity of carbohydrate intake in one meal"
+            }
+          ],
+          "text": "Estimated quantity of carbohydrate intake in one meal",
+          "type": "quantity",
+          "initial": [
+            {
+              "valueQuantity": {
+                "unit": "gram",
+                "system": "http://unitsofmeasure.org",
+                "code": "g"
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "linkId": "3780801167909",
