@@ -1,0 +1,293 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "7e09e96a-f1c8-4d8b-ad01-8eed9ff132ca",
+  "meta": {
+    "versionId": "5",
+    "lastUpdated": "2023-08-14T11:42:08.246Z"
+  },
+  "url": "https://example.fhir.nhs.uk/Questionnaire/163011000000101",
+  "identifier": [
+    {
+      "system": "http://snomed.info/sct",
+      "value": "163011000000101"
+    }
+  ],
+  "title": "Social context",
+  "status": "draft",
+  "description": "Mock based on extract of PRSB Diabetes standard https://theprsb.org/standards/diabetesstandards/",
+  "code": [
+    {
+      "system": "http://snomed.info/sct",
+      "code": "163011000000101",
+      "display": "Social Context"
+    }
+  ],
+  "item": [
+    {
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "help",
+                    "display": "Help-Button"
+                  }
+                ],
+                "text": "Help-Button"
+              }
+            }
+          ],
+          "linkId": "7793249472624_helpText",
+          "text": "Description of the household composition e.g. lives alone, lives with family, lives with partner, shared accommodation etc",
+          "type": "display"
+        }
+      ],
+      "type": "group",
+      "linkId": "7793249472624",
+      "text": "Household composition",
+      "repeats": true
+    },
+    {
+      "linkId": "8917028970417",
+      "text": "Occupational history",
+      "type": "group",
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "help",
+                    "display": "Help-Button"
+                  }
+                ],
+                "text": "Help-Button"
+              }
+            }
+          ],
+          "linkId": "8917028970417_helpText",
+          "text": "The current and/or previous occupation(s) of the person",
+          "type": "display"
+        }
+      ]
+    },
+    {
+      "linkId": "1546040099337",
+      "text": "Driving status",
+      "type": "display"
+    },
+    {
+      "linkId": "5677754908042",
+      "text": "Meal patterns",
+      "type": "display"
+    },
+    {
+      "linkId": "3780801167909",
+      "text": "Smoking status",
+      "type": "group",
+      "item": [
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationLinkPeriod",
+              "valueDuration": {
+                "value": 1,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract",
+              "valueBoolean": true
+            }
+          ],
+          "linkId": "7475739942789",
+          "code": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "365981007",
+              "display": "Tobacco smoking behaviour - finding"
+            }
+          ],
+          "text": "Smoking Status",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "8517006",
+                "display": "Ex-smoker"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "266919005",
+                "display": "Never smoked tobacco"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "405746006",
+                "display": "Current non smoker but past smoking history unknown"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "77176002",
+                "display": "Smoker"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "1098881000000103",
+                "display": "Declined to give smoking status"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "266927001",
+                "display": "Tobacco smoking consumption unknown"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "5714775778988",
+          "text": "Details",
+          "type": "string"
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract",
+              "valueBoolean": true
+            },
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationLinkPeriod",
+              "valueDuration": {
+                "value": 1,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            }
+          ],
+          "linkId": "7373483344877",
+          "code": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "160625004",
+              "display": "Date ceased smoking"
+            }
+          ],
+          "text": "Date stopped smoking",
+          "type": "date"
+        }
+      ]
+    },
+    {
+      "linkId": "3487464139295",
+      "text": "Alcohol",
+      "type": "group",
+      "item": [
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract",
+              "valueBoolean": true
+            },
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationLinkPeriod",
+              "valueDuration": {
+                "value": 1,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            }
+          ],
+          "linkId": "1624186208143",
+          "code": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "228273003",
+              "display": "Alcohol drinking behaviour"
+            }
+          ],
+          "text": "Intake (coded)",
+          "repeats": true,
+          "answerValueSet": "https://fhir.nhs.uk/ValueSet/AlcoholIntake"
+        },
+        {
+          "type": "string",
+          "linkId": "9843036047427",
+          "text": "Intake (free text)"
+        }
+      ]
+    },
+    {
+      "linkId": "7379434005058",
+      "text": "Drug/substance use",
+      "type": "group",
+      "item": [
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract",
+              "valueBoolean": true
+            },
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationLinkPeriod",
+              "valueDuration": {
+                "value": 1,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            }
+          ],
+          "linkId": "1763245197494",
+          "code": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "228366006",
+              "display": "Finding relating to drug misuse behaviour"
+            }
+          ],
+          "text": "Use (coded)",
+          "answerValueSet": "https://fhir.nhs.uk/ValueSet/DrugSubstanceUse"
+        },
+        {
+          "linkId": "753122037409",
+          "text": "Use (free text)",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "linkId": "5365194231840",
+      "text": "Access",
+      "type": "display"
+    },
+    {
+      "linkId": "4478761143239",
+      "text": "Accommodation status",
+      "type": "display"
+    }
+  ]
+}
