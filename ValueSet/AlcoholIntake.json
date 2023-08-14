@@ -1,6 +1,6 @@
 {
     "resourceType": "ValueSet",
-    "id": "7c0fc496-02fc-4644-9fd0-90d91175684d",
+    "id": "a52fe385-723b-43bd-bb22-5a9038531cfb",
     "url": "https://fhir.nhs.uk/ValueSet/AlcoholIntake",
     "version": "2.1.0",
     "name": "AlcoholIntake",
@@ -11,10 +11,10 @@
     "description": "From PRSB definition in diabetes",
     "copyright": "Copyright © 2021+ NHS England",
     "compose": {
-        "include":  [
+        "include": [
             {
                 "system": "http://snomed.info/sct",
-                "filter":  [
+                "filter": [
                     {
                         "property": "constraint",
                         "op": "=",
@@ -23,5 +23,9 @@
                 ]
             }
         ]
+    },
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-08-14T11:24:24.308Z"
     }
 }
