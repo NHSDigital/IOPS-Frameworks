@@ -2,8 +2,8 @@
   "resourceType": "Questionnaire",
   "id": "7e09e96a-f1c8-4d8b-ad01-8eed9ff132ca",
   "meta": {
-    "versionId": "7",
-    "lastUpdated": "2023-08-14T13:04:09.956Z"
+    "versionId": "8",
+    "lastUpdated": "2023-08-14T13:34:39.759Z"
   },
   "url": "https://example.fhir.nhs.uk/Questionnaire/163011000000101",
   "identifier": [
@@ -72,22 +72,43 @@
         {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationLinkPeriod",
+              "valueDuration": {
+                "value": 2,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract",
+              "valueBoolean": true
+            },
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
               "valueCodeableConcept": {
                 "coding": [
                   {
                     "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "help",
-                    "display": "Help-Button"
+                    "code": "autocomplete",
+                    "display": "Auto-complete"
                   }
-                ],
-                "text": "Help-Button"
+                ]
               }
             }
           ],
           "linkId": "8917028970417_helpText",
-          "text": "The current and/or previous occupation(s) of the person",
-          "type": "display"
+          "code": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "14679004",
+              "display": "Occupation"
+            }
+          ],
+          "text": "The current and/or previous occupation(s) of the person (coded)",
+          "type": "choice",
+          "repeats": true,
+          "answerValueSet": "https://fhir.nhs.uk/ValueSet/OccupationalHistory"
         }
       ]
     },
