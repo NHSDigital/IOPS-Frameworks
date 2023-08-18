@@ -2,8 +2,8 @@
   "resourceType": "Questionnaire",
   "id": "7e09e96a-f1c8-4d8b-ad01-8eed9ff132ca",
   "meta": {
-    "versionId": "10",
-    "lastUpdated": "2023-08-14T15:13:59.310Z"
+    "versionId": "13",
+    "lastUpdated": "2023-08-18T05:26:15.968Z"
   },
   "url": "https://example.fhir.nhs.uk/Questionnaire/163011000000101",
   "identifier": [
@@ -120,7 +120,120 @@
     {
       "linkId": "1546040099337",
       "text": "Driving status",
-      "type": "display"
+      "type": "group",
+      "item": [
+        {
+          "linkId": "7223533949732",
+          "code": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "446497005",
+              "display": "Has driver's license (finding)"
+            }
+          ],
+          "text": "Current Driver",
+          "type": "choice",
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "Group1",
+                "display": "Has group 1 driver's license - cars and/or motorcycles"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Group2",
+                "display": "Has group 2 driver's license - large lorries and/or buses"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Nil",
+                "display": "Does not have driving license"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract",
+              "valueBoolean": true
+            },
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationLinkPeriod",
+              "valueDuration": {
+                "value": 2,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            }
+          ],
+          "linkId": "851869094714",
+          "code": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "312866008",
+              "display": "Patient advised about driving"
+            }
+          ],
+          "text": "DVLA notification status",
+          "type": "choice",
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "183077002",
+                "display": "Patient advised to inform DVLA"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "1382591000000101",
+                "display": "Subject of record informed Driver and Vehicle Licensing Agency (finding)"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "183076006",
+                "display": "Patient advised not to drive (situation)"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract",
+              "valueBoolean": true
+            }
+          ],
+          "linkId": "2142056533745",
+          "code": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "243860001",
+              "display": "Diabetic monitoring status"
+            }
+          ],
+          "text": " Monitors blood glucose",
+          "type": "open-choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "853671000000101",
+                "display": "Does monitor blood glucose level before driving"
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "linkId": "5677754908042",
@@ -340,6 +453,13 @@
             }
           ],
           "linkId": "7373483344877",
+          "code": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "160617001",
+              "display": "Stopped smoking"
+            }
+          ],
           "text": "Date stopped smoking",
           "type": "date",
           "item": [
@@ -451,12 +571,19 @@
     {
       "linkId": "5365194231840",
       "text": "Access",
-      "type": "display"
+      "type": "text"
     },
     {
       "linkId": "4478761143239",
       "text": "Accommodation status",
-      "type": "display"
+      "type": "group",
+      "item": [
+        {
+          "linkId": "8612628963403",
+          "text": " Accommodation status (free text)",
+          "type": "string"
+        }
+      ]
     }
   ]
 }
