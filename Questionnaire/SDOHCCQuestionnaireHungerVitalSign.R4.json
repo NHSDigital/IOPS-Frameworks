@@ -1,6 +1,7 @@
 {
   "item": [
     {
+      "type": "choice",
       "extension": [
         {
           "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
@@ -16,8 +17,8 @@
           }
         },
         {
-          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract",
-          "valueBoolean": true
+          "valueBoolean": true,
+          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract"
         },
         {
           "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationLinkPeriod",
@@ -38,7 +39,6 @@
         }
       ],
       "text": "(I/We) worried whether (my/our) food would run out before (I/we) got money to buy more.",
-      "type": "choice",
       "required": false,
       "readOnly": false,
       "answerOption": [
@@ -73,6 +73,7 @@
       ]
     },
     {
+      "type": "choice",
       "extension": [
         {
           "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
@@ -88,8 +89,8 @@
           }
         },
         {
-          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract",
-          "valueBoolean": true
+          "valueBoolean": true,
+          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract"
         },
         {
           "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationLinkPeriod",
@@ -110,7 +111,6 @@
         }
       ],
       "text": "The food that (I/we) bought just didn't last, and (I/we) didn't have money to get more.",
-      "type": "choice",
       "required": false,
       "answerOption": [
         {
@@ -228,6 +228,7 @@
       ],
       "item": [
         {
+          "type": "display",
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
@@ -244,8 +245,7 @@
             }
           ],
           "linkId": "/88124-3-help",
-          "text": "An answer of \"often true\" or \"sometimes true\" to either or both of the Hunger Vital Sign™ questions identifies a patient as at risk for food insecurity (FI).",
-          "type": "display"
+          "text": "An answer of \"often true\" or \"sometimes true\" to either or both of the Hunger Vital Sign™ questions identifies a patient as at risk for food insecurity (FI)."
         }
       ]
     }
@@ -253,8 +253,8 @@
   "resourceType": "Questionnaire",
   "id": "3a47ea3b-c7ac-433f-b587-117b0c14e1eb",
   "meta": {
-    "versionId": "4",
-    "lastUpdated": "2023-08-19T07:24:35.057Z"
+    "versionId": "2",
+    "lastUpdated": "2023-08-19T07:21:11.066Z"
   },
   "extension": [
     {
