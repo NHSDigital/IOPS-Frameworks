@@ -2,8 +2,8 @@
   "resourceType": "Questionnaire",
   "id": "61bfa8e9-41f8-4cb0-a9fb-36848b35eb85",
   "meta": {
-    "versionId": "12",
-    "lastUpdated": "2023-08-19T03:31:46.227Z"
+    "versionId": "18",
+    "lastUpdated": "2023-08-19T04:12:33.804Z"
   },
   "url": "https://fhir.nhs.uk/Questionnaire/EOLC",
   "identifier": [
@@ -33,10 +33,6 @@
   ],
   "item": [
     {
-      "linkId": "ATP",
-      "text": "Advanced Treatment Preferences",
-      "type": "group",
-      "enableBehavior": "any",
       "item": [
         {
           "extension": [
@@ -184,7 +180,11 @@
           "enableBehavior": "any",
           "required": true
         }
-      ]
+      ],
+      "type": "group",
+      "linkId": "ATP",
+      "text": "Advanced Treatment Preferences",
+      "enableBehavior": "any"
     },
     {
       "extension": [
@@ -195,8 +195,38 @@
       ],
       "linkId": "CON",
       "text": "Consent",
-      "type": "string",
-      "enableBehavior": "any"
+      "type": "group",
+      "enableBehavior": "any",
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract",
+              "valueBoolean": true
+            }
+          ],
+          "linkId": "9253808136974",
+          "code": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "887031000000108",
+              "display": "Consent for information sharing"
+            }
+          ],
+          "text": "Consent for Information Sharing",
+          "type": "date"
+        },
+        {
+          "linkId": "2464570706244",
+          "text": "Consent Author",
+          "type": "string"
+        },
+        {
+          "linkId": "1993621548518",
+          "text": "Notes",
+          "type": "text"
+        }
+      ]
     },
     {
       "linkId": "CPR",
@@ -397,10 +427,18 @@
             }
           ],
           "linkId": "DIS001.1",
+          "code": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "21134002",
+              "display": "Disability"
+            }
+          ],
           "text": "Patient Disabilities",
-          "type": "string",
+          "type": "choice",
           "enableBehavior": "any",
-          "repeats": true
+          "repeats": true,
+          "answerValueSet": "https://fhir.nhs.uk/ValueSet/Disability"
         },
         {
           "extension": [
@@ -510,9 +548,38 @@
       ],
       "linkId": "FUN",
       "text": "Functional Status",
-      "type": "choice",
+      "type": "group",
       "enableBehavior": "any",
-      "repeats": true
+      "repeats": true,
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationLinkPeriod",
+              "valueDuration": {
+                "value": 2,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract",
+              "valueBoolean": true
+            }
+          ],
+          "linkId": "2673070059149",
+          "code": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "761869008",
+              "display": "KPS (Karnofsky Performance Status) score"
+            }
+          ],
+          "text": "KPS (Karnofsky Performance Status) score",
+          "type": "quantity"
+        }
+      ]
     },
     {
       "extension": [
@@ -700,33 +767,63 @@
       ]
     },
     {
-      "extension": [
+      "linkId": "2688623529043",
+      "text": "Prognosis",
+      "type": "group",
+      "item": [
         {
-          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationLinkPeriod",
-          "valueDuration": {
-            "value": 2,
-            "unit": "years",
-            "system": "http://unitsofmeasure.org",
-            "code": "a"
-          }
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationLinkPeriod",
+              "valueDuration": {
+                "value": 2,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract",
+              "valueBoolean": true
+            }
+          ],
+          "linkId": "PRO",
+          "code": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "365858006",
+              "display": "Prognosis/outlook finding"
+            }
+          ],
+          "text": "Prognosis",
+          "type": "choice",
+          "enableBehavior": "any",
+          "answerValueSet": "https://fhir.nhs.uk/ValueSet/EOLPrognosisCode"
         },
         {
-          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract",
-          "valueBoolean": true
-        }
-      ],
-      "linkId": "PRO",
-      "code": [
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract",
+              "valueBoolean": true
+            }
+          ],
+          "linkId": "968771518207",
+          "code": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "170969009",
+              "display": "Prognosis bad"
+            }
+          ],
+          "text": "Prognosis Date",
+          "type": "date"
+        },
         {
-          "system": "http://snomed.info/sct",
-          "code": "365858006",
-          "display": "Prognosis/outlook finding"
+          "linkId": "8526381330007",
+          "text": "Prognosis Author",
+          "type": "string"
         }
-      ],
-      "text": "Prognosis",
-      "type": "choice",
-      "enableBehavior": "any",
-      "answerValueSet": "https://fhir.nhs.uk/ValueSet/EOLPrognosisCode"
+      ]
     }
   ]
 }
