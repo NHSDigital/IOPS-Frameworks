@@ -2,8 +2,8 @@
   "resourceType": "Questionnaire",
   "id": "0d9fccea-9c98-4e61-b3e0-bc9b3a9db675",
   "meta": {
-    "versionId": "10",
-    "lastUpdated": "2023-08-16T14:00:02.124Z"
+    "versionId": "13",
+    "lastUpdated": "2023-08-27T13:25:06.269Z"
   },
   "url": "https://example.fhir.nhs.uk/Questionnaire/VitalSignsFinding",
   "title": "Vital signs finding",
@@ -47,6 +47,10 @@
           "system": "http://snomed.info/sct",
           "code": "927981000000106",
           "display": "Baseline SpO2 (oxygen saturation at periphery)"
+        },
+        {
+          "system": "http://loinc.org",
+          "code": "59408-5"
         }
       ],
       "text": "Baseline SpO2 (oxygen saturation at periphery)",
@@ -83,6 +87,14 @@
             "code": "kg",
             "display": "kilogram"
           }
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+          "valueCoding": {
+            "system": "http://unitsofmeasure.org",
+            "code": "[lb_av]",
+            "display": "pound"
+          }
         }
       ],
       "linkId": "/27113001",
@@ -91,6 +103,10 @@
           "system": "http://snomed.info/sct",
           "code": "27113001",
           "display": "Body weight"
+        },
+        {
+          "system": "http://loinc.org",
+          "code": "29463-7"
         }
       ],
       "text": "Weight Measured",
@@ -127,6 +143,14 @@
             "system": "http://unitsofmeasure.org",
             "code": "cm",
             "display": "centimeter"
+          }
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+          "valueCoding": {
+            "system": "http://unitsofmeasure.org",
+            "code": "[in_i]",
+            "display": "inch"
           }
         }
       ],
@@ -173,6 +197,14 @@
             "code": "cm",
             "display": "centimeter"
           }
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+          "valueCoding": {
+            "system": "http://unitsofmeasure.org",
+            "code": "[in_i]",
+            "display": "inch"
+          }
         }
       ],
       "linkId": "/50373000",
@@ -181,6 +213,10 @@
           "system": "http://snomed.info/sct",
           "code": "50373000",
           "display": "Body height measure"
+        },
+        {
+          "system": "http://loinc.org",
+          "code": "8302-2"
         }
       ],
       "text": "Body height",
@@ -242,7 +278,6 @@
       ]
     },
     {
-      "type": "quantity",
       "extension": [
         {
           "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract",
@@ -266,6 +301,7 @@
         }
       ],
       "text": "Systolic blood pressure",
+      "type": "quantity",
       "required": false,
       "initial": [
         {
@@ -278,7 +314,6 @@
       ]
     },
     {
-      "type": "quantity",
       "extension": [
         {
           "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationLinkPeriod",
@@ -311,6 +346,7 @@
         }
       ],
       "text": "Diastolic blood pressure",
+      "type": "quantity",
       "required": false,
       "initial": [
         {
@@ -352,6 +388,10 @@
           "system": "http://snomed.info/sct",
           "code": "364075005",
           "display": "Heart rate"
+        },
+        {
+          "system": "http://loinc.org",
+          "code": "8867-4"
         }
       ],
       "text": "Heart rate",
