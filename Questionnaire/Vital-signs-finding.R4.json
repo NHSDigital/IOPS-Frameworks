@@ -2,8 +2,8 @@
   "resourceType": "Questionnaire",
   "id": "0d9fccea-9c98-4e61-b3e0-bc9b3a9db675",
   "meta": {
-    "versionId": "13",
-    "lastUpdated": "2023-08-27T13:25:06.269Z"
+    "versionId": "14",
+    "lastUpdated": "2023-08-28T04:35:32.332Z"
   },
   "url": "https://example.fhir.nhs.uk/Questionnaire/VitalSignsFinding",
   "title": "Vital signs finding",
@@ -53,6 +53,7 @@
           "code": "59408-5"
         }
       ],
+      "prefix": "1",
       "text": "Baseline SpO2 (oxygen saturation at periphery)",
       "required": false,
       "initial": [
@@ -109,6 +110,7 @@
           "code": "29463-7"
         }
       ],
+      "prefix": "2",
       "text": "Weight Measured",
       "type": "quantity",
       "required": false,
@@ -162,6 +164,7 @@
           "display": "Head circumference measure"
         }
       ],
+      "prefix": "3",
       "text": "Head circumference",
       "type": "quantity",
       "required": false,
@@ -219,6 +222,7 @@
           "code": "8302-2"
         }
       ],
+      "prefix": "4",
       "text": "Body height",
       "type": "quantity",
       "required": false,
@@ -264,6 +268,7 @@
           "display": "Core body temperature"
         }
       ],
+      "prefix": "5",
       "text": "Body temperature",
       "type": "quantity",
       "required": false,
@@ -300,6 +305,7 @@
           "display": "Systolic arterial pressure"
         }
       ],
+      "prefix": "6",
       "text": "Systolic blood pressure",
       "type": "quantity",
       "required": false,
@@ -345,6 +351,7 @@
           "display": "Diastolic arterial pressure"
         }
       ],
+      "prefix": "7",
       "text": "Diastolic blood pressure",
       "type": "quantity",
       "required": false,
@@ -394,6 +401,7 @@
           "code": "8867-4"
         }
       ],
+      "prefix": "8",
       "text": "Heart rate",
       "type": "quantity",
       "required": false,
@@ -439,6 +447,7 @@
           "display": "Respiratory rate"
         }
       ],
+      "prefix": "9",
       "text": "Resp rate",
       "type": "quantity",
       "required": false,
@@ -484,6 +493,7 @@
           "display": "Body mass index"
         }
       ],
+      "prefix": "10",
       "text": "BMI",
       "type": "quantity",
       "required": false,
@@ -521,6 +531,7 @@
           "display": "Alert Confusion Voice Pain Unresponsive scale score"
         }
       ],
+      "prefix": "11",
       "text": "ACVPU (Alert Confusion Voice Pain Unresponsive) scale",
       "type": "choice",
       "answerOption": [
@@ -585,6 +596,7 @@
           "display": "Finding of respiration"
         }
       ],
+      "prefix": "12",
       "text": "Inspired Oxygen",
       "type": "choice",
       "answerOption": [

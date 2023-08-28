@@ -2,8 +2,8 @@
   "resourceType": "Questionnaire",
   "id": "7e09e96a-f1c8-4d8b-ad01-8eed9ff132ca",
   "meta": {
-    "versionId": "13",
-    "lastUpdated": "2023-08-18T05:26:15.968Z"
+    "versionId": "19",
+    "lastUpdated": "2023-08-28T07:40:05.780Z"
   },
   "url": "https://example.fhir.nhs.uk/Questionnaire/163011000000101",
   "identifier": [
@@ -14,7 +14,7 @@
   ],
   "title": "Social context",
   "status": "draft",
-  "description": "Mock based on extract of PRSB Diabetes standard https://theprsb.org/standards/diabetesstandards/",
+  "description": "A mock based on the Social Context heading from PRSB Diabetes standard https://theprsb.org/standards/diabetesstandards/",
   "code": [
     {
       "system": "http://snomed.info/sct",
@@ -49,23 +49,21 @@
               "display": "Household composition - finding"
             }
           ],
-          "text": "Household composition (coded)",
-          "type": "choice",
+          "prefix": "1.1",
+          "text": "Household composition",
+          "type": "open-choice",
           "repeats": true,
           "answerValueSet": "https://fhir.nhs.uk/ValueSet/HouseholdComposition"
-        },
-        {
-          "linkId": "890285773997",
-          "text": "Household composition (free text)",
-          "type": "text"
         }
       ],
       "type": "group",
       "linkId": "1770961441094",
+      "prefix": "1",
       "text": "Household Composition"
     },
     {
       "linkId": "8917028970417",
+      "prefix": "2",
       "text": "Occupational history",
       "type": "group",
       "item": [
@@ -105,20 +103,17 @@
               "display": "Occupation"
             }
           ],
+          "prefix": "2.1",
           "text": "The current and/or previous occupation(s) of the person (coded)",
-          "type": "choice",
+          "type": "open-choice",
           "repeats": true,
           "answerValueSet": "https://fhir.nhs.uk/ValueSet/OccupationalHistory"
-        },
-        {
-          "linkId": "9497321031709",
-          "text": "The current and/or previous occupation(s) of the person (free text)",
-          "type": "string"
         }
       ]
     },
     {
       "linkId": "1546040099337",
+      "prefix": "3",
       "text": "Driving status",
       "type": "group",
       "item": [
@@ -131,8 +126,9 @@
               "display": "Has driver's license (finding)"
             }
           ],
+          "prefix": "3.1",
           "text": "Current Driver",
-          "type": "choice",
+          "type": "open-choice",
           "repeats": true,
           "answerOption": [
             {
@@ -179,8 +175,9 @@
               "display": "Patient advised about driving"
             }
           ],
+          "prefix": "3.2",
           "text": "DVLA notification status",
-          "type": "choice",
+          "type": "open-choice",
           "repeats": true,
           "answerOption": [
             {
@@ -221,6 +218,7 @@
               "display": "Diabetic monitoring status"
             }
           ],
+          "prefix": "3.3",
           "text": " Monitors blood glucose",
           "type": "open-choice",
           "answerOption": [
@@ -237,6 +235,7 @@
     },
     {
       "linkId": "5677754908042",
+      "prefix": "4",
       "text": "Meal patterns",
       "type": "group",
       "item": [
@@ -276,8 +275,9 @@
               "display": "Finding of eating pattern"
             }
           ],
+          "prefix": "4.1",
           "text": "Meal Patterns",
-          "type": "choice",
+          "type": "open-choice",
           "repeats": true,
           "answerValueSet": "https://fhir.nhs.uk/ValueSet/MealPatterns"
         },
@@ -305,8 +305,9 @@
               "display": "Carbohydrate diet"
             }
           ],
+          "prefix": "4.2",
           "text": "Carbohydrate Intake",
-          "type": "choice",
+          "type": "open-choice",
           "answerValueSet": "https://fhir.nhs.uk/ValueSet/CarbohydateIntake"
         },
         {
@@ -341,6 +342,7 @@
               "display": "Estimated quantity of carbohydrate intake in one meal"
             }
           ],
+          "prefix": "4.3",
           "text": "Estimated quantity of carbohydrate intake in one meal",
           "type": "quantity",
           "initial": [
@@ -357,6 +359,7 @@
     },
     {
       "linkId": "3780801167909",
+      "prefix": "5",
       "text": "Smoking status",
       "type": "group",
       "item": [
@@ -384,8 +387,9 @@
               "display": "Tobacco smoking behaviour - finding"
             }
           ],
+          "prefix": "5.1",
           "text": "Smoking Status",
-          "type": "choice",
+          "type": "open-choice",
           "answerOption": [
             {
               "valueCoding": {
@@ -433,6 +437,7 @@
         },
         {
           "linkId": "5714775778988",
+          "prefix": "5.2",
           "text": "Details",
           "type": "string"
         },
@@ -460,6 +465,7 @@
               "display": "Stopped smoking"
             }
           ],
+          "prefix": "5.3",
           "text": "Date stopped smoking",
           "type": "date",
           "item": [
@@ -489,6 +495,7 @@
     },
     {
       "linkId": "3487464139295",
+      "prefix": "6",
       "text": "Alcohol",
       "type": "group",
       "item": [
@@ -516,20 +523,17 @@
               "display": "Alcohol drinking behaviour"
             }
           ],
-          "text": "Intake (coded)",
-          "type": "choice",
+          "prefix": "6.1",
+          "text": "Intake",
+          "type": "open-choice",
           "repeats": true,
           "answerValueSet": "https://fhir.nhs.uk/ValueSet/AlcoholIntake"
-        },
-        {
-          "linkId": "9843036047427",
-          "text": "Intake (free text)",
-          "type": "string"
         }
       ]
     },
     {
       "linkId": "7379434005058",
+      "prefix": "7",
       "text": "Drug/substance use",
       "type": "group",
       "item": [
@@ -557,31 +561,53 @@
               "display": "Finding relating to drug misuse behaviour"
             }
           ],
-          "text": "Use (coded)",
-          "type": "choice",
+          "prefix": "7.1",
+          "text": "Use",
+          "type": "open-choice",
           "answerValueSet": "https://fhir.nhs.uk/ValueSet/DrugSubstanceUse"
-        },
-        {
-          "linkId": "753122037409",
-          "text": "Use (free text)",
-          "type": "string"
         }
       ]
     },
     {
       "linkId": "5365194231840",
+      "prefix": "8",
       "text": "Access",
       "type": "text"
     },
     {
       "linkId": "4478761143239",
+      "prefix": "9",
       "text": "Accommodation status",
       "type": "group",
       "item": [
         {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationLinkPeriod",
+              "valueDuration": {
+                "value": 2,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract",
+              "valueBoolean": true
+            }
+          ],
           "linkId": "8612628963403",
-          "text": " Accommodation status (free text)",
-          "type": "string"
+          "code": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "272497004",
+              "display": "Residential environment"
+            }
+          ],
+          "prefix": "9.1",
+          "text": " Accommodation status",
+          "type": "open-choice",
+          "answerValueSet": "https://beta.datadictionary.nhs.uk/valueSet/accommodation_status_code"
         }
       ]
     }
