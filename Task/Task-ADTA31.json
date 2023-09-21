@@ -21,12 +21,14 @@
         }
       ]
     },
-    "focus": {
-      "reference": "https://int.api.service.nhs.uk/personal-demographics/FHIR/R4/Patient/9912003888",
+    "for": {
       "identifier" : {
         "system": "https://fhir.nhs.uk/Id/nhs-number",
         "value": "9912003888"
-      },
+      }
+  },
+    "focus": {
+      "reference": "https://int.api.service.nhs.uk/personal-demographics/FHIR/R4/Patient/9912003888",
       "type": "Patient",
       "display": "DAWKINS (dob 2017-10-02 probably use an extension)"
     },
