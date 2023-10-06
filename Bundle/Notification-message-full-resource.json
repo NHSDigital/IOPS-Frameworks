@@ -32,6 +32,13 @@
                         "reference": "urn:uuid:8faea997-df7d-4e71-85af-4acd1cd47ca8"
                     }
                 ]
+            },
+            "request": {
+                "method": "GET",
+                "url": "Subscription/123/$status"
+            },
+            "response": {
+                "status": "200"
             }
         },
         {
