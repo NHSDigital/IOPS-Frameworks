@@ -52,42 +52,48 @@
             "timestamp": "2021-01-07T15:13:00+00:00",
             "entry": [
                 {
-                    "resourceType": "Parameters",
-                    "parameter": [
-                        {
-                            "name": "status",
-                            "valueCode": "active"
+                    "fullUrl": "urn:uuid:8faea997-df7d-4e71-85af-4acd1cd47ca8",
+                    "resource": {
+                        "resourceType": "Parameters",
+                        "meta" : {
+                            "profile": "https://fhir.nhs.uk/StructureDefinition/England-Parameters-SubscriptionStatus"
                         },
-                        {
-                            "name": "notificationEvent",
-                            "part": [
-                                {
-                                    "name": "eventNumber",
-                                    "valueInteger": "1"
-                                },
-                                {
-                                    "name": "timestamp",
-                                    "valueInstant": "2022-01-07T15:06:00+00:00"
-                                },
-                                {
-                                    "name": "focus",
-                                    "valueReference": {
-                                        "reference": "http://example.org/FHIR/R4B/Encounter/2"
+                        "parameter": [
+                            {
+                                "name": "status",
+                                "valueCode": "active"
+                            },
+                            {
+                                "name": "notificationEvent",
+                                "part": [
+                                    {
+                                        "name": "eventNumber",
+                                        "valueInteger": "1"
+                                    },
+                                    {
+                                        "name": "timestamp",
+                                        "valueInstant": "2022-01-07T15:06:00+00:00"
+                                    },
+                                    {
+                                        "name": "focus",
+                                        "valueReference": {
+                                            "reference": "http://example.org/FHIR/R4B/Encounter/2"
+                                        }
                                     }
+                                ]
+                            },
+                            {
+                                "name": "subscription",
+                                "valueReference": {
+                                    "reference": "https://spine.nhs.uk/Subscription/5c4c8f04-1c36-4b8d-94e1-4e4b08e873d8"
                                 }
-                            ]
-                        },
-                        {
-                            "name": "subscription",
-                            "valueReference": {
-                                "reference": "https://spine.nhs.uk/Subscription/5c4c8f04-1c36-4b8d-94e1-4e4b08e873d8"
+                            },
+                            {
+                                "name": "topic",
+                                "valueCanonical": "https://fhir.nhs.uk/SubscriptionTopic/referral-sent"
                             }
-                        },
-                        {
-                            "name": "topic",
-                            "valueCanonical": "https://fhir.nhs.uk/SubscriptionTopic/referral-sent"
-                        }
-                    ]
+                        ]
+                    }
                 },
                 {
                     "fullUrl": "https://example.org/FHIR/R4/Encounter/2",
