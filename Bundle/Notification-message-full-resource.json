@@ -50,6 +50,13 @@
                         "valueCanonical": "https://fhir.nhs.uk/SubscriptionTopic/referral-sent"
                     }
                 ]
+            },
+            "request" : {
+              "method" : "GET",
+              "url" : "https://example.org/fhir/Subscription/admission/$status"
+            },
+            "response" : {
+              "status" : "200"
             }
         },
         {
