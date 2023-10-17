@@ -56,7 +56,7 @@
                             {
                                 "name": "focus",
                                 "valueReference": {
-                                    "reference": "https://example.org/FHIR/R4/Encounter/2"
+                                    "reference": "https://int.api.service.nhs.uk/personal-demographics/FHIR/R4/Patient/9912003888"
                                 }
                             },
                             {
