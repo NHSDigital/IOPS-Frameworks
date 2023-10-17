@@ -12,10 +12,36 @@
             "fullUrl": "urn:uuid:844ebe20-78f0-4d77-8890-44d588717ca9",
             "resource": {
                 "resourceType": "MessageHeader",
+                "extension": {
+                    "url": "https://fhir.nhs.uk/STU3/StructureDefinition/Extension-RoutingDemographics-1",
+                    "extension": [
+                      {
+                        "url": "nhsNumber",
+                        "valueIdentifier": {
+                          "system": "https://fhir.nhs.uk/Id/nhs-number",
+                          "value": "9912003888"
+                        }
+                      },
+                      {
+                        "url": "name",
+                        "valueHumanName": {
+                          "use": "official",
+                          "family": "DAWKINS",
+                          "given": [
+                            "Jack"
+                          ]
+                        }
+                      },
+                      {
+                        "url": "birthDateTime",
+                        "valueDateTime": "2017-10-02T12:00:00+00:00"
+                      }
+                    ]
+                  },
                 "eventCoding": {
-                    "system": "https://fhir.nhs.uk/STU3/CodeSystem/EMS-EventType-1",
-                    "code": "pds-change-of-gp-1 ",
-                    "display": "PDS Change of GP"
+                    "system": "https://fhir.nhs.uk/CodeSystem/message-event",
+                    "code": "notification",
+                    "display": "Event Notification"
                 },
                 "sender": {
                     "identifier": [
@@ -23,7 +49,7 @@
                             "system": "https://fhir.nhs.uk/Id/nhsSpineASID",
                             "value": "477121000324"
                         }
-                    ]
+                    ] 
                 },
                 "source": {
                     "name": "NHS Digital",
@@ -32,8 +58,9 @@
                 "reason": {
                     "coding": [
                         {
-                            "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
-                            "code": "A28"
+                            "system": "https://fhir.nhs.uk/STU3/CodeSystem/EMS-EventType-1",
+                            "code": "pds-change-of-gp-1",
+                            "display": "PDS Change of GP"
                         }
                     ]
                 },
