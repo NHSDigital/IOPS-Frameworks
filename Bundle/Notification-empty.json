@@ -1,11 +1,6 @@
 {
     "resourceType": "Bundle",
     "id": "8faea997-df7d-4e71-85af-4acd1cd47ca8",
-    "meta" : {
-        "profile" : [
-          "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-subscription-notification-r4"
-        ]
-      },
     "identifier": {
         "system": "https://tools.ietf.org/html/rfc4122",
         "value": "8faea997-df7d-4e71-85af-4acd1cd47ca8"
@@ -17,10 +12,11 @@
             "fullUrl": "urn:uuid:c6ca3f0a-2470-407d-b0f4-c3dc70ab153b",
             "resource": {
                 "resourceType": "Parameters",
-                "profile" : [
-                    "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-subscription-notification"
-                  ]
-                },ß
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-subscription-status-r4"
+                    ]
+                },
                 "parameter": [
                     {
                         "name": "subscription",
@@ -30,7 +26,7 @@
                     },
                     {
                         "name": "topic",
-                        "valueString": "http://hl7.org/SubscriptionTopic/admission"
+                        "valueCanonical": "http://hl7.org/SubscriptionTopic/admission"
                     },
                     {
                         "name": "status",
