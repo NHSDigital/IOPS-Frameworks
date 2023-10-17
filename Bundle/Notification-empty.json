@@ -1,6 +1,11 @@
 {
     "resourceType": "Bundle",
     "id": "8faea997-df7d-4e71-85af-4acd1cd47ca8",
+    "meta" : {
+        "profile" : [
+          "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-subscription-notification-r4"
+        ]
+      },
     "identifier": {
         "system": "https://tools.ietf.org/html/rfc4122",
         "value": "8faea997-df7d-4e71-85af-4acd1cd47ca8"
