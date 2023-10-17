@@ -14,7 +14,8 @@
                 "resourceType": "Parameters",
                 "profile" : [
                     "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-subscription-notification"
-                  ],
+                  ]
+                },ß
                 "parameter": [
                     {
                         "name": "subscription",
