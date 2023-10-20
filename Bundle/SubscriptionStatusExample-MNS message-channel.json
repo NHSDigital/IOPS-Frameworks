@@ -14,7 +14,7 @@
                 "resourceType": "MessageHeader",
                 "extension": [
                     {
-                        "url": "https://fhir.nhs.uk/STU3/StructureDefinition/Extension-RoutingDemographics-1",
+                        "url": "https://fhir.nhs.uk/StructureDefinition/Extension-RoutingDemographics",
                         "extension": [
                             {
                                 "url": "nhsNumber",
