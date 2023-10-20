@@ -108,18 +108,18 @@
         <code value="HumanName" />
       </type>
     </element>
-    <element id="Extension.extension:birthDateTime">
+    <element id="Extension.extension:birthDate">
       <path value="Extension.extension" />
-      <sliceName value="birthDateTime" />
+      <sliceName value="birthDate" />
       <short value="The date of birth for the patient" />
       <definition value="A date, date-time or partial date the Patient was born." />
       <max value="1" />
     </element>
-    <element id="Extension.extension:birthDateTime.url">
+    <element id="Extension.extension:birthDate.url">
       <path value="Extension.extension.url" />
-      <fixedUri value="birthDateTime" />
+      <fixedUri value="birthDate" />
     </element>
-    <element id="Extension.extension:birthDateTime.value[x]">
+    <element id="Extension.extension:birthDate.value[x]">
       <path value="Extension.extension.value[x]" />
       <slicing>
         <discriminator>
@@ -130,13 +130,13 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Extension.extension:birthDateTime.value[x]:valueDateTime">
+    <element id="Extension.extension:birthDate.value[x]:valueDate">
       <path value="Extension.extension.value[x]" />
-      <sliceName value="valueDateTime" />
+      <sliceName value="valueDate" />
       <short value="The date of birth for the individual" />
       <definition value="The date of birth for the individual." />
       <type>
-        <code value="dateTime" />
+        <code value="date" />
       </type>
     </element>
     <element id="Extension.url">
