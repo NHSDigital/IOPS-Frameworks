@@ -1,0 +1,411 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "description": "CapabilityStatement for Server Actor in the IHE IT Infrastructure Technical Framework Supplement IHE PDQm.",
+    "contact": {
+      "name": "NHS England",
+      "email": "interoperabilityteam@nhs.net"
+    }
+  },
+  "externalDocs": {
+    "description": "Hl7 FHIR R4",
+    "url": "https://www.hl7.org/fhir/"
+  },
+  "servers": [
+    {}
+  ],
+  "tags": [
+    {
+      "name": "System Level Operations",
+      "description": "Server-level operations"
+    },
+    {
+      "name": "Patient",
+      "description": "\n\n Demographics and other administrative information about an individual or animal receiving care or other health-related services.\n\n Tracking patient is the center of the healthcare process.\n\n Profile (constraints): [UKCore-Patient](https://simplifier.net/guide/nhsdigital)\n\n\n\n This profile defines the UK constraints and extensions on the International FHIR resource [Patient](https://hl7.org/fhir/R4/Patient.html).\n\n This profile allows exchange of demographics and other administrative information about an individual receiving care or other health-related services.",
+      "x-HL7-FHIR-Profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Patient"
+    }
+  ],
+  "paths": {
+    "/metadata": {
+      "get": {
+        "tags": [
+          "System Level Operations"
+        ],
+        "summary": "server-capabilities: Fetch the server FHIR CapabilityStatement",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CapabilityStatement"
+                },
+                "examples": {
+                  "example": {
+                    "value": "{\"resourceType\":\"CapabilityStatement\",\"id\":\"GB.ENG.PDQm.Supplier\",\"url\":\"https://fhir.nhs.uk/England/CapabilityStatement/PDQm.Supplier\",\"version\":\"3.0.0-ballot\",\"name\":\"GB_ENG_PDQm_Supplier\",\"title\":\"PDQm Supplier (server)\",\"status\":\"active\",\"experimental\":false,\"date\":\"2023-12-14\",\"publisher\":\"NHS England\",\"contact\":[{\"name\":\"NHS England\",\"telecom\":[{\"system\":\"email\",\"value\":\"interoperabilityteam@nhs.net\",\"use\":\"work\",\"rank\":1}]}],\"description\":\"CapabilityStatement for Server Actor in the IHE IT Infrastructure Technical Framework Supplement IHE PDQm.\",\"jurisdiction\":[{\"coding\":[{\"system\":\"urn:iso:std:iso:3166:-2\",\"code\":\"GB-ENG\"}]}],\"copyright\":\"Copyright © 2023+ NHS England Licensed under the Apache License, Version 2.0 (the \\\\\\\"License\\\\\\\"); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \\\\\\\"AS IS\\\\\\\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html.\",\"kind\":\"requirements\",\"fhirVersion\":\"4.0.1\",\"format\":[\"application/fhir+xml\",\"application/fhir+json\"],\"rest\":[{\"mode\":\"server\",\"documentation\":\"PDQm server provides capability to query for Patient resources matching a sub-set of the FHIR core Patient resource query parameters\",\"security\":{\"cors\":false,\"description\":\"None mandated by IHE, encouraged IHE-IUA or SMART-on-FHIR\"},\"resource\":[{\"type\":\"Patient\",\"profile\":\"https://fhir.hl7.org.uk/StructureDefinition/UKCore-Patient\",\"interaction\":[{\"code\":\"read\"},{\"code\":\"search-type\"}],\"searchParam\":[{\"name\":\"_id\",\"type\":\"token\",\"documentation\":\"Logical id of this artifact\"},{\"name\":\"active\",\"type\":\"token\",\"documentation\":\"Whether the patient record is active\"},{\"name\":\"address-city\",\"type\":\"string\",\"documentation\":\"A city specified in an address\"},{\"name\":\"address-country\",\"type\":\"string\",\"documentation\":\"A country specified in an address\"},{\"name\":\"address-postalcode\",\"type\":\"string\",\"documentation\":\"A postalCode specified in an address\"},{\"name\":\"address-state\",\"type\":\"string\",\"documentation\":\"A state specified in an address\"},{\"name\":\"birthdate\",\"type\":\"date\",\"documentation\":\"The patient's date of birth\"},{\"name\":\"family\",\"type\":\"string\",\"documentation\":\"A portion of the family name of the patient\"},{\"name\":\"gender\",\"type\":\"token\",\"documentation\":\"Gender of the patient\"},{\"name\":\"given\",\"type\":\"string\",\"documentation\":\"A portion of the given name of the patient\"},{\"name\":\"identifier\",\"type\":\"token\",\"documentation\":\"A patient identifier\"},{\"name\":\"telecom\",\"type\":\"token\",\"documentation\":\"The value in any kind of telecom details of the patient\"},{\"name\":\"_lastUpdated\",\"type\":\"date\",\"documentation\":\"When the resource version last changed\"}]}],\"interaction\":[{\"code\":\"search-system\"}]}]}"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationOutcome"
+                },
+                "examples": {
+                  "example": {
+                    "value": "{\n  \"resourceType\": \"OperationOutcome\",\n  \"meta\": {\n    \"lastUpdated\": \"2021-04-14T11:35:00+00:00\"\n  },\n  \"issue\": [ {\n    \"severity\": \"error\",\n    \"code\": \"forbidden\",\n    \"details\": {\n      \"coding\": [ {\n        \"system\": \"https://fhir.nhs.uk/CodeSystem/Spine-ErrorOrWarningCode\",\n        \"code\": \"ACCESS_DENIED\"\n      } ]\n    }\n  } ]\n}"
+                  }
+                }
+              }
+            }
+          },
+          "4xx": {
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationOutcome"
+                },
+                "examples": {
+                  "example": {
+                    "value": "{\n  \"resourceType\": \"OperationOutcome\",\n  \"meta\": {\n    \"lastUpdated\": \"2021-04-14T11:35:00+00:00\"\n  },\n  \"issue\": [ {\n    \"severity\": \"error\",\n    \"code\": \"value\",\n    \"details\": {\n      \"coding\": [ {\n        \"system\": \"https://fhir.nhs.uk/CodeSystem/Spine-ErrorOrWarningCode\",\n        \"code\": \"INVALID_VALUE\"\n      } ]\n    },\n    \"diagnostics\": \"(invalid_request) firstName is missing\",\n    \"expression\": [ \"Patient.name.given\" ]\n  } ]\n}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Patient/{id}": {
+      "get": {
+        "tags": [
+          "Patient"
+        ],
+        "summary": "read",
+        "description": "[read](http://www.hl7.org/fhir/http.html#read) Patient instance.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The resource ID",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "minimum": 1,
+              "type": "string"
+            },
+            "example": "6160eb19-6fc3-4b43-953a-54ea01dc1cf4"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Patient"
+                },
+                "example": "{\"resourceType\":\"Patient\"}"
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Patient"
+                },
+                "example": "{\"resourceType\":\"Patient\"}"
+              }
+            }
+          },
+          "403": {
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationOutcome"
+                },
+                "examples": {
+                  "example": {
+                    "value": "{\n  \"resourceType\": \"OperationOutcome\",\n  \"meta\": {\n    \"lastUpdated\": \"2021-04-14T11:35:00+00:00\"\n  },\n  \"issue\": [ {\n    \"severity\": \"error\",\n    \"code\": \"forbidden\",\n    \"details\": {\n      \"coding\": [ {\n        \"system\": \"https://fhir.nhs.uk/CodeSystem/Spine-ErrorOrWarningCode\",\n        \"code\": \"ACCESS_DENIED\"\n      } ]\n    }\n  } ]\n}"
+                  }
+                }
+              }
+            }
+          },
+          "4xx": {
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationOutcome"
+                },
+                "examples": {
+                  "example": {
+                    "value": "{\n  \"resourceType\": \"OperationOutcome\",\n  \"meta\": {\n    \"lastUpdated\": \"2021-04-14T11:35:00+00:00\"\n  },\n  \"issue\": [ {\n    \"severity\": \"error\",\n    \"code\": \"value\",\n    \"details\": {\n      \"coding\": [ {\n        \"system\": \"https://fhir.nhs.uk/CodeSystem/Spine-ErrorOrWarningCode\",\n        \"code\": \"INVALID_VALUE\"\n      } ]\n    },\n    \"diagnostics\": \"(invalid_request) firstName is missing\",\n    \"expression\": [ \"Patient.name.given\" ]\n  } ]\n}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Patient": {
+      "get": {
+        "tags": [
+          "Patient"
+        ],
+        "summary": "search-type",
+        "description": "[search](http://www.hl7.org/fhir/search.html) for Patient instances.",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "query",
+            "description": "Logical id of this artifact\n\n | Name | Type |  Expression | \n |--------|--------|--------| \n | _id | [token ](https://www.hl7.org/fhir/search.html#token)|  Resource.id | \n",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "format": "token",
+              "example": "[system]|[code],[code],[system]",
+              "items": {
+                "type": "string",
+                "format": "token"
+              }
+            }
+          },
+          {
+            "name": "active",
+            "in": "query",
+            "description": "Whether the patient record is active\n\n | Name | Type |  Expression | \n |--------|--------|--------| \n | active | [token ](https://www.hl7.org/fhir/search.html#token)|  Patient.active | \n",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "format": "token",
+              "example": "[system]|[code],[code],[system]",
+              "items": {
+                "type": "string",
+                "format": "token"
+              }
+            }
+          },
+          {
+            "name": "address-city",
+            "in": "query",
+            "description": "A city specified in an address\n\n | Name | Type |  Expression | \n |--------|--------|--------| \n | address-city | [string ](https://www.hl7.org/fhir/search.html#string)|  Patient.address.city | \n",
+            "style": "form",
+            "schema": {
+              "type": "string",
+              "example": "LS15"
+            }
+          },
+          {
+            "name": "address-country",
+            "in": "query",
+            "description": "A country specified in an address\n\n | Name | Type |  Expression | \n |--------|--------|--------| \n | address-country | [string ](https://www.hl7.org/fhir/search.html#string)|  Patient.address.country | \n",
+            "style": "form",
+            "schema": {
+              "type": "string",
+              "example": "LS15"
+            }
+          },
+          {
+            "name": "address-postalcode",
+            "in": "query",
+            "description": "A postalCode specified in an address\n\n | Name | Type |  Expression | \n |--------|--------|--------| \n | address-postalcode | [string ](https://www.hl7.org/fhir/search.html#string)|  Patient.address.postalCode | \n",
+            "style": "form",
+            "schema": {
+              "type": "string",
+              "example": "LS15"
+            }
+          },
+          {
+            "name": "address-state",
+            "in": "query",
+            "description": "A state specified in an address\n\n | Name | Type |  Expression | \n |--------|--------|--------| \n | address-state | [string ](https://www.hl7.org/fhir/search.html#string)|  Patient.address.state | \n",
+            "style": "form",
+            "schema": {
+              "type": "string",
+              "example": "LS15"
+            }
+          },
+          {
+            "name": "birthdate",
+            "in": "query",
+            "description": "The patient's date of birth\n\n | Name | Type |  Expression | \n |--------|--------|--------| \n | birthdate | [date/datetime ](https://www.hl7.org/fhir/search.html#date/datetime)|  Patient.birthDate | \n",
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "format": "date",
+              "example": "eq2013-01-14",
+              "items": {
+                "type": "string",
+                "format": "date"
+              }
+            }
+          },
+          {
+            "name": "family",
+            "in": "query",
+            "description": "A portion of the family name of the patient\n\n | Name | Type |  Expression | \n |--------|--------|--------| \n | family | [string ](https://www.hl7.org/fhir/search.html#string)|  Patient.name.family | \n",
+            "style": "form",
+            "schema": {
+              "type": "string",
+              "example": "LS15"
+            }
+          },
+          {
+            "name": "gender",
+            "in": "query",
+            "description": "Gender of the patient\n\n | Name | Type |  Expression | \n |--------|--------|--------| \n | gender | [token ](https://www.hl7.org/fhir/search.html#token)|  Patient.gender | \n",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "format": "token",
+              "example": "[system]|[code],[code],[system]",
+              "items": {
+                "type": "string",
+                "format": "token"
+              }
+            }
+          },
+          {
+            "name": "given",
+            "in": "query",
+            "description": "A portion of the given name of the patient\n\n | Name | Type |  Expression | \n |--------|--------|--------| \n | given | [string ](https://www.hl7.org/fhir/search.html#string)|  Patient.name.given | \n",
+            "style": "form",
+            "schema": {
+              "type": "string",
+              "example": "LS15"
+            }
+          },
+          {
+            "name": "identifier",
+            "in": "query",
+            "description": "A patient identifier\n\n | Name | Type |  Expression | \n |--------|--------|--------| \n | identifier | [token ](https://www.hl7.org/fhir/search.html#token)|  Patient.identifier | \n",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "format": "token",
+              "example": "[system]|[code],[code],[system]",
+              "items": {
+                "type": "string",
+                "format": "token"
+              }
+            }
+          },
+          {
+            "name": "telecom",
+            "in": "query",
+            "description": "The value in any kind of telecom details of the patient\n\n | Name | Type |  Expression | \n |--------|--------|--------| \n | telecom | [token ](https://www.hl7.org/fhir/search.html#token)|  Patient.telecom | \n",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "format": "token",
+              "example": "[system]|[code],[code],[system]",
+              "items": {
+                "type": "string",
+                "format": "token"
+              }
+            }
+          },
+          {
+            "name": "_lastUpdated",
+            "in": "query",
+            "description": "When the resource version last changed\n\n | Name | Type |  Expression | \n |--------|--------|--------| \n | _lastUpdated | [date/datetime ](https://www.hl7.org/fhir/search.html#date/datetime)|  Resource.meta.lastUpdated | \n",
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "format": "date",
+              "example": "eq2013-01-14",
+              "items": {
+                "type": "string",
+                "format": "date"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Patient"
+                },
+                "example": "{\"resourceType\":\"Patient\"}"
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Patient"
+                },
+                "example": "{\"resourceType\":\"Patient\"}"
+              }
+            }
+          },
+          "403": {
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationOutcome"
+                },
+                "examples": {
+                  "example": {
+                    "value": "{\n  \"resourceType\": \"OperationOutcome\",\n  \"meta\": {\n    \"lastUpdated\": \"2021-04-14T11:35:00+00:00\"\n  },\n  \"issue\": [ {\n    \"severity\": \"error\",\n    \"code\": \"forbidden\",\n    \"details\": {\n      \"coding\": [ {\n        \"system\": \"https://fhir.nhs.uk/CodeSystem/Spine-ErrorOrWarningCode\",\n        \"code\": \"ACCESS_DENIED\"\n      } ]\n    }\n  } ]\n}"
+                  }
+                }
+              }
+            }
+          },
+          "4xx": {
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationOutcome"
+                },
+                "examples": {
+                  "example": {
+                    "value": "{\n  \"resourceType\": \"OperationOutcome\",\n  \"meta\": {\n    \"lastUpdated\": \"2021-04-14T11:35:00+00:00\"\n  },\n  \"issue\": [ {\n    \"severity\": \"error\",\n    \"code\": \"value\",\n    \"details\": {\n      \"coding\": [ {\n        \"system\": \"https://fhir.nhs.uk/CodeSystem/Spine-ErrorOrWarningCode\",\n        \"code\": \"INVALID_VALUE\"\n      } ]\n    },\n    \"diagnostics\": \"(invalid_request) firstName is missing\",\n    \"expression\": [ \"Patient.name.given\" ]\n  } ]\n}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CapabilityStatement": {
+        "type": "object",
+        "description": "HL7 FHIR Schema [CapabilityStatement](https://hl7.org/fhir/R4/fhir.schema.json#/definitions/CapabilityStatement).. HL7 FHIR Documentation [CapabilityStatement](\"https://www.hl7.org/fhir/CapabilityStatement.html\")",
+        "externalDocs": {
+          "description": "CapabilityStatement",
+          "url": "https://www.hl7.org/fhir/CapabilityStatement.html"
+        }
+      },
+      "OperationOutcome": {
+        "type": "object",
+        "description": "HL7 FHIR Schema [OperationOutcome](https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome).. HL7 FHIR Documentation [OperationOutcome](\"https://www.hl7.org/fhir/OperationOutcome.html\")",
+        "externalDocs": {
+          "description": "OperationOutcome",
+          "url": "https://www.hl7.org/fhir/OperationOutcome.html"
+        }
+      },
+      "Patient": {
+        "type": "object",
+        "description": "HL7 FHIR Schema [Patient](https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Patient).. HL7 FHIR Documentation [Patient](\"https://www.hl7.org/fhir/Patient.html\")\n\n This profile defines the UK constraints and extensions on the International FHIR resource [Patient](https://hl7.org/fhir/R4/Patient.html).\n\n This profile allows exchange of demographics and other administrative information about an individual receiving care or other health-related services.",
+        "externalDocs": {
+          "description": "Patient",
+          "url": "https://www.hl7.org/fhir/Patient.html"
+        }
+      }
+    }
+  }
+}
