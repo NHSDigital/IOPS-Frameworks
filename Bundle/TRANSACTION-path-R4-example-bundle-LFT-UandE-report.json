@@ -2,10 +2,7 @@
     "resourceType": "Bundle",
     "id": "path-R4-example-bundle-LFT-UandE-report",
     "meta": {
-        "lastUpdated": "2022-03-08T14:23:00+00:00",
-        "profile": [
-            "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Bundle"
-        ]
+        "lastUpdated": "2022-03-08T14:23:00+00:00"
     },
     "type": "transaction",
     "entry": [
@@ -34,8 +31,8 @@
                 ]
             },
             "request": {
-                "method": "PUT",
-                "url": "Organization/8a6d85b8-9837-4fed-a257-4cf207988338"
+                "method": "POST",
+                "url": "Organization"
             }
         },
         {
@@ -62,8 +59,8 @@
                 ]
             },
             "request": {
-                "method": "PUT",
-                "url": "Organization/3c43b5b3-06d6-445f-ae9a-48d5f05df434"
+                "method": "POST",
+                "url": "Organization"
             }
         },
         {
@@ -86,8 +83,8 @@
                 }
             },
             "request": {
-                "method": "PUT",
-                "url": "PractitionerRole/9a835acf-d715-4d84-8dcf-a8435f6417fe"
+                "method": "POST",
+                "url": "PractitionerRole"
             }
         },
         {
@@ -115,8 +112,8 @@
                 ]
             },
             "request": {
-                "method": "PUT",
-                "url": "Practitioner/bf166714-9527-40fc-84ec-0c4ba6487e12"
+                "method": "POST",
+                "url": "Practitioner"
             }
         },
         {
@@ -153,8 +150,8 @@
                 ]
             },
             "request": {
-                "method": "PUT",
-                "url": "Patient/ab87a3f8-1d37-44a9-804e-5e962598a6e4"
+                "method": "POST",
+                "url": "Patient"
             }
         },
         {
@@ -215,8 +212,8 @@
                 ]
             },
             "request": {
-                "method": "PUT",
-                "url": "ServiceRequest/1c38d507-9ad7-4b49-ba91-7da204842cac"
+                "method": "POST",
+                "url": "ServiceRequest"
             }
         },
         {
@@ -277,8 +274,8 @@
                 ]
             },
             "request": {
-                "method": "PUT",
-                "url": "ServiceRequest/8660ef6a-65ef-408f-92ce-b4d6d03d783c"
+                "method": "POST",
+                "url": "ServiceRequest"
             }
         },
         {
@@ -336,8 +333,8 @@
                 ]
             },
             "request": {
-                "method": "PUT",
-                "url": "DiagnosticReport/35d46ca1-f253-4c97-b7ee-fb5fccdf6c20"
+                "method": "POST",
+                "url": "DiagnosticReport"
             }
         },
         {
@@ -380,8 +377,8 @@
                 }
             },
             "request": {
-                "method": "PUT",
-                "url": "Specimen/bab0eaec-1ec5-4598-b660-90bb38a1030d"
+                "method": "POST",
+                "url": "Specimen"
             }
         },
         {
@@ -430,8 +427,8 @@
                 ]
             },
             "request": {
-                "method": "PUT",
-                "url": "Observation/33a88119-6dbc-4bdf-809a-c1d822b74e90"
+                "method": "POST",
+                "url": "Observation"
             }
         },
         {
@@ -490,8 +487,8 @@
                 ]
             },
             "request": {
-                "method": "PUT",
-                "url": "Observation/47faffbf-34c0-45b2-9c65-285f89fd1521"
+                "method": "POST",
+                "url": "Observation"
             }
         },
         {
@@ -553,8 +550,8 @@
                 ]
             },
             "request": {
-                "method": "PUT",
-                "url": "Observation/aa8aa37b-3a69-478f-a2be-947af624d7cb"
+                "method": "POST",
+                "url": "Observation"
             }
         },
         {
@@ -613,8 +610,8 @@
                 ]
             },
             "request": {
-                "method": "PUT",
-                "url": "Observation/3f98327b-f215-4bc5-bd52-ed6477a3da4a"
+                "method": "POST",
+                "url": "Observation"
             }
         },
         {
@@ -669,8 +666,8 @@
                 ]
             },
             "request": {
-                "method": "PUT",
-                "url": "Observation/a5c7f5e2-eb95-469b-b588-f7861c260ccb"
+                "method": "POST",
+                "url": "Observation"
             }
         },
         {
@@ -732,8 +729,8 @@
                 ]
             },
             "request": {
-                "method": "PUT",
-                "url": "Observation/c6989afa-156a-4f7e-ab91-d4249680d8bf"
+                "method": "POST",
+                "url": "Observation"
             }
         },
         {
@@ -795,8 +792,8 @@
                 ]
             },
             "request": {
-                "method": "PUT",
-                "url": "Observation/f5a0e88f-a76a-4526-8927-579771471c58"
+                "method": "POST",
+                "url": "Observation"
             }
         },
         {
@@ -858,8 +855,8 @@
                 ]
             },
             "request": {
-                "method": "PUT",
-                "url": "Observation/aa2151a3-3f5b-4f0d-9074-52563aa77c6c"
+                "method": "POST",
+                "url": "Observation"
             }
         },
         {
@@ -921,8 +918,8 @@
                 ]
             },
             "request": {
-                "method": "PUT",
-                "url": "Observation/3c6b11c8-83b6-4402-90b9-2e1e7400d7cc"
+                "method": "POST",
+                "url": "Observation"
             }
         },
         {
@@ -979,8 +976,8 @@
                 ]
             },
             "request": {
-                "method": "PUT",
-                "url": "Observation/e6127f03-4a96-45d3-abd8-1adcf0189be4"
+                "method": "POST",
+                "url": "Observation"
             }
         }
     ]
