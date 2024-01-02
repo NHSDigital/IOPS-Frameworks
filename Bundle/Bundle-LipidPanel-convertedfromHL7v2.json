@@ -3,7 +3,7 @@
     "type": "transaction",
     "entry": [
       {
-        "fullUrl": "urn:uuid:11e5c885-bab4-4b82-be69-e8b0b95777dc",
+        "fullUrl": "urn:uuid:c4f1aa84-76d9-4585-b309-9260f32ec949",
         "resource": {
           "resourceType": "Patient",
           "identifier": [
@@ -28,7 +28,7 @@
         }
       },
       {
-        "fullUrl": "urn:uuid:a84b1866-a603-4bcc-b54a-966d258687ce",
+        "fullUrl": "urn:uuid:67fd52e4-7a19-4da4-bea1-06ae3ee7c212",
         "resource": {
           "resourceType": "ServiceRequest",
           "identifier": [
@@ -50,7 +50,7 @@
             ]
           },
           "subject": {
-            "reference": "urn:uuid:11e5c885-bab4-4b82-be69-e8b0b95777dc"
+            "reference": "urn:uuid:c4f1aa84-76d9-4585-b309-9260f32ec949"
           },
           "requester": {
             "identifier": {
@@ -65,7 +65,7 @@
         }
       },
       {
-        "fullUrl": "urn:uuid:70eae5b9-2bed-4253-ac3d-b4c4ba2e542f",
+        "fullUrl": "urn:uuid:d42aafbf-4a41-49e2-9310-1893b8cf29ec",
         "resource": {
           "resourceType": "Specimen",
           "identifier": [
@@ -85,7 +85,7 @@
             ]
           },
           "subject": {
-            "reference": "urn:uuid:11e5c885-bab4-4b82-be69-e8b0b95777dc"
+            "reference": "urn:uuid:c4f1aa84-76d9-4585-b309-9260f32ec949"
           },
           "collection": {
             "collectedDateTime": "2015-09-25T00:00:00+00:00"
@@ -97,9 +97,15 @@
         }
       },
       {
-        "fullUrl": "urn:uuid:6a217529-bfab-4a28-8491-36e908cd52b7",
+        "fullUrl": "urn:uuid:64a3917c-fadf-4681-9d2e-447ada7b1d1f",
         "resource": {
           "resourceType": "DiagnosticReport",
+          "extension": [
+            {
+              "url": "http://fhir.example.org/backport/DiagnosticReport-note",
+              "valueString": "Patient was fasting prior to the procedure."
+            }
+          ],
           "identifier": [
             {
               "value": "ORD777888-1"
@@ -107,7 +113,7 @@
           ],
           "basedOn": [
             {
-              "reference": "urn:uuid:a84b1866-a603-4bcc-b54a-966d258687ce",
+              "reference": "urn:uuid:67fd52e4-7a19-4da4-bea1-06ae3ee7c212",
               "type": "ServiceRequest",
               "identifier": {
                 "value": "ORD777888"
@@ -130,26 +136,26 @@
             ]
           },
           "subject": {
-            "reference": "urn:uuid:11e5c885-bab4-4b82-be69-e8b0b95777dc"
+            "reference": "urn:uuid:c4f1aa84-76d9-4585-b309-9260f32ec949"
           },
           "effectiveDateTime": "2015-09-25T00:00:00+00:00",
           "specimen": [
             {
-              "reference": "urn:uuid:70eae5b9-2bed-4253-ac3d-b4c4ba2e542f"
+              "reference": "urn:uuid:d42aafbf-4a41-49e2-9310-1893b8cf29ec"
             }
           ],
           "result": [
             {
-              "reference": "urn:uuid:3d41a6be-6ce5-4f64-8f1b-b0ee4ba52f3f"
+              "reference": "urn:uuid:714ed14e-dcd7-435e-b55a-b24d56202e64"
             },
             {
-              "reference": "urn:uuid:27ab986a-94f9-434e-a1d6-1c6a37297683"
+              "reference": "urn:uuid:47c3cad2-7fcc-428b-87e2-16fcfdc78720"
             },
             {
-              "reference": "urn:uuid:e2423517-d535-4683-b192-99d0059ee65f"
+              "reference": "urn:uuid:619f8a20-9795-445e-96e3-b0b46e572939"
             },
             {
-              "reference": "urn:uuid:e5df55fa-a48d-434b-8715-f409971d1db9"
+              "reference": "urn:uuid:98c6110b-e7a4-4629-aa09-6b5da939f4b1"
             }
           ]
         },
@@ -159,7 +165,7 @@
         }
       },
       {
-        "fullUrl": "urn:uuid:3d41a6be-6ce5-4f64-8f1b-b0ee4ba52f3f",
+        "fullUrl": "urn:uuid:714ed14e-dcd7-435e-b55a-b24d56202e64",
         "resource": {
           "resourceType": "Observation",
           "identifier": [
@@ -178,9 +184,20 @@
             ]
           },
           "subject": {
-            "reference": "urn:uuid:11e5c885-bab4-4b82-be69-e8b0b95777dc"
+            "reference": "urn:uuid:c4f1aa84-76d9-4585-b309-9260f32ec949"
           },
           "effectiveDateTime": "2015-09-25T00:00:00+00:00",
+          "performer": [
+            {
+              "display": "Century Hospital"
+            },
+            {
+              "identifier": {
+                "value": "5432178916"
+              },
+              "display": "Dr. Phil Knowsalot"
+            }
+          ],
           "valueQuantity": {
             "value": 196,
             "unit": "milligrams per deciliter",
@@ -210,7 +227,7 @@
         }
       },
       {
-        "fullUrl": "urn:uuid:27ab986a-94f9-434e-a1d6-1c6a37297683",
+        "fullUrl": "urn:uuid:47c3cad2-7fcc-428b-87e2-16fcfdc78720",
         "resource": {
           "resourceType": "Observation",
           "identifier": [
@@ -229,9 +246,20 @@
             ]
           },
           "subject": {
-            "reference": "urn:uuid:11e5c885-bab4-4b82-be69-e8b0b95777dc"
+            "reference": "urn:uuid:c4f1aa84-76d9-4585-b309-9260f32ec949"
           },
           "effectiveDateTime": "2015-09-25T00:00:00+00:00",
+          "performer": [
+            {
+              "display": "Century Hospital"
+            },
+            {
+              "identifier": {
+                "value": "5432178916"
+              },
+              "display": "Dr. Phil Knowsalot"
+            }
+          ],
           "valueQuantity": {
             "value": 100,
             "unit": "milligrams per deciliter",
@@ -261,7 +289,7 @@
         }
       },
       {
-        "fullUrl": "urn:uuid:e2423517-d535-4683-b192-99d0059ee65f",
+        "fullUrl": "urn:uuid:619f8a20-9795-445e-96e3-b0b46e572939",
         "resource": {
           "resourceType": "Observation",
           "identifier": [
@@ -280,9 +308,20 @@
             ]
           },
           "subject": {
-            "reference": "urn:uuid:11e5c885-bab4-4b82-be69-e8b0b95777dc"
+            "reference": "urn:uuid:c4f1aa84-76d9-4585-b309-9260f32ec949"
           },
           "effectiveDateTime": "2015-09-25T00:00:00+00:00",
+          "performer": [
+            {
+              "display": "Century Hospital"
+            },
+            {
+              "identifier": {
+                "value": "5432178916"
+              },
+              "display": "Dr. Phil Knowsalot"
+            }
+          ],
           "valueQuantity": {
             "value": 60,
             "unit": "milligrams per deciliter",
@@ -312,7 +351,7 @@
         }
       },
       {
-        "fullUrl": "urn:uuid:e5df55fa-a48d-434b-8715-f409971d1db9",
+        "fullUrl": "urn:uuid:98c6110b-e7a4-4629-aa09-6b5da939f4b1",
         "resource": {
           "resourceType": "Observation",
           "identifier": [
@@ -331,9 +370,20 @@
             ]
           },
           "subject": {
-            "reference": "urn:uuid:11e5c885-bab4-4b82-be69-e8b0b95777dc"
+            "reference": "urn:uuid:c4f1aa84-76d9-4585-b309-9260f32ec949"
           },
           "effectiveDateTime": "2015-09-25T00:00:00+00:00",
+          "performer": [
+            {
+              "display": "Century Hospital"
+            },
+            {
+              "identifier": {
+                "value": "5432178916"
+              },
+              "display": "Dr. Phil Knowsalot"
+            }
+          ],
           "valueQuantity": {
             "value": 116,
             "unit": "milligrams per deciliter",
