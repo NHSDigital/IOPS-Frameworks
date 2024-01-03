@@ -3,10 +3,11 @@
 	<meta>
 	    <lastUpdated value="2023-12-20T12:15:30.8185338+00:00" />
 	</meta>
+    <url value="https://example.fhir.org/Questionnair/PatientConsciousStateValues"/>
 	<contained>
 		<ValueSet>
 			<id value="breathing"/>
-			<name value="Patient breathing values"/>
+			<name value="PatientBreathingValues"/>
 			<status value="active"/>
 			<description value="Answers for patient breathing"/>
 			<compose>
@@ -21,7 +22,7 @@
 					</concept>
 					<concept>
 						<code value="1023001"/>
-						<display value="Apnea (finding) synonym is 'not breathing' "/>
+						<display value="Apnea (finding) synonym is 'not breathing'"/>
 						<designation>
 							<value value="N" />
 						</designation>
@@ -33,7 +34,7 @@
 	<contained>
 		<ValueSet>
 			<id value="conscious"/>
-			<name value="Patient conscious state values"/>
+			<name value="PatientConsciousStateValues"/>
 			<status value="active"/>
 			<description value="Answers for patient conscious"/>
 			<compose>
@@ -67,7 +68,7 @@
 	<contained>
 		<ValueSet>
 			<id value="noisy"/>
-			<name value="Noisy breathing values"/>
+			<name value="NoisyBreathingValues"/>
 			<status value="active"/>
 			<description value="Answers for whether patient has noisy breathing"/>
 			<compose>
@@ -95,7 +96,7 @@
 		<value value="76b4622b-2b8b-4f24-aee5-2631c7695594" />
 	</identifier>
 	<version value="0.1" />
-	<name value="PTS" />
+	<name value="Pts" />
 	<title value="Pre Triage Sieve Questionnaire" />
 	<status value="active" />
 	<experimental value="false" />
@@ -117,6 +118,7 @@
 			<question value="0" />
 			<operator value="="/> 
 			<answerCoding>
+                <system value="http://snomed.info/sct"/>
 				<code value="78064003" />
 				<display value="Respiratory function (observable entity)" />
 			</answerCoding>
@@ -132,6 +134,7 @@
 			<question value="1" />
 			<operator value="="/> 
 			<answerCoding>
+                <system value="http://snomed.info/sct"/>
 				<code value="271591004"/>
 				<display value="Fully conscious (finding)"/>
 			</answerCoding>
