@@ -28,17 +28,18 @@
                 {
                     "valueCoding": {
                         "system": "http://snomed.info/sct",
-                        "code": "78064003",
-                        "display": "Respiratory function (observable entity)"
+                        "code": "1023001",
+                        "display": "Apnoea"
                     }
                 },
                 {
                     "valueCoding": {
                         "system": "http://snomed.info/sct",
-                        "code": "1023001",
-                        "display": "Apnea (finding)"
+                        "code": "78064003",
+                        "display": "Respiratory function"
                     }
                 }
+        
             ]
         },
         {
