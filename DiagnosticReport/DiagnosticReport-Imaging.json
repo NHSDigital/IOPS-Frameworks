@@ -7,23 +7,23 @@
     "status": "final",
     "category": [
         {
-          "coding": [
-            {
-              "system": "http://snomed.info/sct",
-              "code": "4201000179104",
-              "display": "Imaging report"
-            }
-          ]
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "4201000179104",
+                    "display": "Imaging report"
+                }
+            ]
         },
         {
             "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
-                "code": "RAD"
-              }
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                    "code": "RAD"
+                }
             ]
-          }
-      ],
+        }
+    ],
     "identifier": [
         {
             "type": {
@@ -34,7 +34,7 @@
                     }
                 ]
             },
-            "system" : "https://fhir.example.org/Id/Accession-Number/Y05868",
+            "system": "https://fhir.example.org/Id/Accession-Number/Y05868",
             "value": "123456789"
         }
     ],
@@ -57,7 +57,7 @@
                         }
                     ]
                 },
-                "system" : "https://fhir.example.org/Id/Accession-Number/Y05868",
+                "system": "https://fhir.example.org/Id/Accession-Number/Y05868",
                 "value": "123456789"
             }
         }
@@ -71,6 +71,25 @@
             }
         ]
     },
+    "media": [
+        {
+            "link": {
+                "type": "DocumentReference",
+                "identifier": {
+                    "type": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                                "code": "FILL"
+                            }
+                        ]
+                    },
+                    "system": "https://fhir.example.org/Id/Accession-Number/Y05868",
+                    "value": "123456789"
+                }
+            }
+        }
+    ],
     "performer": [
         {
             "identifier": {

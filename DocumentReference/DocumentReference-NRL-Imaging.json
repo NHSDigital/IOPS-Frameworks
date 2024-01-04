@@ -56,9 +56,9 @@
   "custodian": {
     "identifier": {
       "system": "https://fhir.nhs.uk/Id/ods-organization-code",
-      "value": "Y05868",
-      "display": "LEEDS TEACHING HOSPITALS NHS TRUST"
-    }
+      "value": "Y05868"
+    },
+    "display": "LEEDS TEACHING HOSPITALS NHS TRUST"
   },
   "content": [
     {
