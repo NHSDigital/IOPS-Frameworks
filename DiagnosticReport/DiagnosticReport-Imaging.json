@@ -19,7 +19,7 @@
             "coding": [
                 {
                     "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
-                    "code": "RAD"
+                    "code": "IMG"
                 }
             ]
         }
@@ -66,8 +66,8 @@
         "coding": [
             {
                 "system": "http://snomed.info/sct",
-                "code": "371525003",
-                "display": "Clinical procedure report (record artifact)"
+                "code": "717321000000108",
+                "display": "Diagnostic imaging report"
             }
         ]
     },
